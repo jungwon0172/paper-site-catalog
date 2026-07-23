@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>arXiv 프리프린트 활용 가이드 | 논문 사이트 카탈로그</title>
+<meta name="description" content="물리학·수학·컴퓨터공학 분야 최신 연구를 arXiv에서 빠르게 확인하는 방법을 정리했습니다.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://paper-site-catalog.vercel.app/guides/arxiv.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@500;600;700;900&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.css">
+<style>
+  :root{
+    --paper:#e9e3d3; --card:#f7f3e6; --ink:#221f1a; --ink-soft:#5c5646;
+    --stamp:#a4382b; --teal:#2c5a4d; --line:#c5bb9e; --gold:#a9822f;
+  }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  body{
+    background:var(--paper);
+    background-image:repeating-linear-gradient(0deg, rgba(0,0,0,0.015) 0px, rgba(0,0,0,0.015) 1px, transparent 1px, transparent 3px);
+    color:var(--ink); font-family:'Pretendard', sans-serif; line-height:1.75;
+    -webkit-font-smoothing:antialiased;
+  }
+  .mono{font-family:'IBM Plex Mono', monospace; letter-spacing:0.02em;}
+  .serif{font-family:'Noto Serif KR', serif;}
+  .sitenav{background:var(--ink); color:var(--paper);}
+  .sitenav-inner{max-width:1040px; margin:0 auto; padding:14px 28px; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:10px; font-size:12px;}
+  .sitenav-inner .brand{color:var(--paper); text-decoration:none; letter-spacing:0.06em; font-weight:600;}
+  .sitenav-links{display:flex; gap:18px;}
+  .sitenav-links a{color:#cfc7ac; text-decoration:none; transition:color .12s ease;}
+  .sitenav-links a:hover{color:var(--paper);}
+
+  .page{max-width:720px; margin:0 auto; padding:56px 28px 80px;}
+  .drawer-tab{display:inline-flex; align-items:center; gap:10px; background:var(--ink); color:var(--paper); padding:7px 16px 7px 14px; font-size:12.5px; letter-spacing:0.14em; border-radius:2px 2px 0 0;}
+  .drawer-tab .dot{width:6px;height:6px;border-radius:50%;background:var(--stamp);}
+  .tags{margin:14px 0 0; display:flex; gap:6px; flex-wrap:wrap;}
+  .tag{font-family:'IBM Plex Mono', monospace; font-size:10.5px; padding:2px 7px; border-radius:2px; border:1px solid currentColor;}
+  .tag.free{color:var(--teal);}
+  .tag.paid{color:var(--stamp);}
+  .tag.region{color:var(--ink-soft); border-color:var(--line);}
+  h1{
+    font-family:'Noto Serif KR', serif; font-size:clamp(28px,5vw,42px); font-weight:900;
+    margin-top:16px; border-top:3px solid var(--ink); border-bottom:1px solid var(--ink); padding:18px 0 20px;
+  }
+  h2{font-family:'Noto Serif KR', serif; font-size:19px; font-weight:700; margin:34px 0 12px;}
+  p{color:var(--ink-soft); font-size:14.5px; margin-bottom:14px;}
+  ol, ul{margin:0 0 16px 20px;}
+  li{color:var(--ink-soft); font-size:14.5px; margin-bottom:8px;}
+  li b{color:var(--ink);}
+  .callout{background:var(--card); border:1px solid var(--line); border-left:3px solid var(--gold); padding:14px 18px; font-size:13.5px; color:var(--ink-soft); margin:18px 0;}
+  .callout b{color:var(--ink);}
+  .backlink{
+    display:inline-block; margin-top:36px; font-family:'IBM Plex Mono', monospace; font-size:12px;
+    color:var(--ink-soft); text-decoration:none; border-bottom:1px solid var(--line); padding-bottom:2px;
+  }
+  .backlink:hover{color:var(--stamp); border-color:var(--stamp);}
+  a.inline{color:var(--stamp); text-decoration:none; border-bottom:1px solid currentColor;}
+  footer{max-width:1040px; margin:20px auto 0; padding:20px 28px 60px; border-top:1px solid var(--line); font-family:'IBM Plex Mono', monospace; font-size:11.5px; color:var(--ink-soft); display:flex; justify-content:space-between; flex-wrap:wrap; gap:8px;}
+  footer a{color:inherit;}
+  @media (max-width:560px){ .page{padding:44px 18px 60px;} }
+</style>
+</head>
+<body>
+
+  <nav class="sitenav mono">
+    <div class="sitenav-inner">
+      <a href="../index.html" class="brand">논문 사이트 카탈로그</a>
+      <div class="sitenav-links">
+        <a href="../index.html">홈</a>
+        <a href="../about.html">사이트 소개</a>
+        <a href="../privacy.html">개인정보처리방침</a>
+      </div>
+    </div>
+  </nav>
+
+  <div class="page">
+    <div class="drawer-tab mono"><span class="dot"></span>GUIDE · GL·FREE-03</div>
+    <div class="tags"><span class="tag region">해외</span><span class="tag free">무료</span><span class="tag region">물리·수학·컴퓨터</span></div>
+    <h1>arXiv 프리프린트 활용 가이드</h1>
+
+    <p>arXiv는 코넬대학교가 운영하는 프리프린트(preprint) 서버로, 물리학, 수학, 컴퓨터공학, 통계학 등의 분야에서 연구자들이 정식 학술지 게재 전에 직접 논문을 업로드하는 개방형 아카이브입니다. 모든 논문을 무료로 열람할 수 있으며, 특히 AI·머신러닝 분야는 arXiv를 통해 연구가 가장 먼저 공개되는 경우가 많습니다.</p>
+
+    <h2>왜 arXiv를 봐야 하는가</h2>
+    <ul>
+      <li>정식 학술지 게재까지는 보통 몇 달에서 1년 이상 걸리는데, arXiv에는 그 이전 단계의 최신 연구가 바로 올라옵니다.</li>
+      <li>컴퓨터공학, 특히 인공지능 분야는 학회·저널보다 arXiv 공개가 먼저 이루어지는 경우가 흔해, 최신 동향을 따라가려면 사실상 필수적으로 확인해야 하는 곳입니다.</li>
+      <li>전부 무료로 원문(PDF)을 받을 수 있어 접근성이 매우 높습니다.</li>
+    </ul>
+
+    <h2>검색 및 활용 팁</h2>
+    <ol>
+      <li><b>분야 카테고리로 좁혀서 탐색한다.</b> arXiv는 cs.AI, cs.LG, physics 등 세부 분야별로 카테고리가 나뉘어 있어, 관심 분야 카테고리의 최신 업로드 목록만 주기적으로 훑어보는 것도 좋은 방법입니다.</li>
+      <li><b>버전(v1, v2...) 표시를 확인한다.</b> 같은 논문이라도 저자가 수정하며 여러 버전을 올리는 경우가 있으므로, 가능하면 최신 버전을 참고하는 것이 좋습니다.</li>
+      <li><b>정식 게재 여부를 함께 확인한다.</b> 이후 정식 학술지나 학회에 게재되었는지는 논문 페이지 하단이나 Google Scholar 검색으로 교차 확인할 수 있습니다.</li>
+    </ol>
+
+    <h2>주의할 점</h2>
+    <p>arXiv에 올라온 논문은 동료 심사(peer review)를 거치지 않은 상태입니다. 즉 저자가 직접 업로드한 초안이므로, 내용의 완성도나 검증 수준이 저널 게재 논문과 다를 수 있습니다. 인용하거나 근거로 활용할 때는 이후 정식 게재 여부와 다른 연구자들의 반응(인용 수, 후속 연구)을 함께 확인하는 것이 안전합니다.</p>
+
+    <div class="callout"><b>참고 —</b> 심리학이나 사회과학 분야는 arXiv보다 PsyArXiv, SSRN 같은 해당 분야 전용 프리프린트 서버를 확인하는 것이 더 관련성 높은 결과를 줄 수 있습니다.</div>
+
+    <a class="backlink" href="../index.html">← 전체 카탈로그로 돌아가기</a>
+  </div>
+
+  <footer class="mono">
+    <span>PAPER SITE CATALOG · GUIDE</span>
+    <span><a href="../index.html">홈으로</a> · <a href="../about.html">사이트 소개</a></span>
+  </footer>
+
+</body>
+</html>

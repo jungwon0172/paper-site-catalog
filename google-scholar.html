@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Google Scholar 200% 활용법 | 논문 사이트 카탈로그</title>
+<meta name="description" content="Google Scholar에서 무료 원문을 찾고 인용 정보를 활용하는 검색 팁을 정리했습니다.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://paper-site-catalog.vercel.app/guides/google-scholar.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@500;600;700;900&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.css">
+<style>
+  :root{
+    --paper:#e9e3d3; --card:#f7f3e6; --ink:#221f1a; --ink-soft:#5c5646;
+    --stamp:#a4382b; --teal:#2c5a4d; --line:#c5bb9e; --gold:#a9822f;
+  }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  body{
+    background:var(--paper);
+    background-image:repeating-linear-gradient(0deg, rgba(0,0,0,0.015) 0px, rgba(0,0,0,0.015) 1px, transparent 1px, transparent 3px);
+    color:var(--ink); font-family:'Pretendard', sans-serif; line-height:1.75;
+    -webkit-font-smoothing:antialiased;
+  }
+  .mono{font-family:'IBM Plex Mono', monospace; letter-spacing:0.02em;}
+  .serif{font-family:'Noto Serif KR', serif;}
+  .sitenav{background:var(--ink); color:var(--paper);}
+  .sitenav-inner{max-width:1040px; margin:0 auto; padding:14px 28px; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:10px; font-size:12px;}
+  .sitenav-inner .brand{color:var(--paper); text-decoration:none; letter-spacing:0.06em; font-weight:600;}
+  .sitenav-links{display:flex; gap:18px;}
+  .sitenav-links a{color:#cfc7ac; text-decoration:none; transition:color .12s ease;}
+  .sitenav-links a:hover{color:var(--paper);}
+
+  .page{max-width:720px; margin:0 auto; padding:56px 28px 80px;}
+  .drawer-tab{display:inline-flex; align-items:center; gap:10px; background:var(--ink); color:var(--paper); padding:7px 16px 7px 14px; font-size:12.5px; letter-spacing:0.14em; border-radius:2px 2px 0 0;}
+  .drawer-tab .dot{width:6px;height:6px;border-radius:50%;background:var(--stamp);}
+  .tags{margin:14px 0 0; display:flex; gap:6px; flex-wrap:wrap;}
+  .tag{font-family:'IBM Plex Mono', monospace; font-size:10.5px; padding:2px 7px; border-radius:2px; border:1px solid currentColor;}
+  .tag.free{color:var(--teal);}
+  .tag.paid{color:var(--stamp);}
+  .tag.region{color:var(--ink-soft); border-color:var(--line);}
+  h1{
+    font-family:'Noto Serif KR', serif; font-size:clamp(28px,5vw,42px); font-weight:900;
+    margin-top:16px; border-top:3px solid var(--ink); border-bottom:1px solid var(--ink); padding:18px 0 20px;
+  }
+  h2{font-family:'Noto Serif KR', serif; font-size:19px; font-weight:700; margin:34px 0 12px;}
+  p{color:var(--ink-soft); font-size:14.5px; margin-bottom:14px;}
+  ol, ul{margin:0 0 16px 20px;}
+  li{color:var(--ink-soft); font-size:14.5px; margin-bottom:8px;}
+  li b{color:var(--ink);}
+  .callout{background:var(--card); border:1px solid var(--line); border-left:3px solid var(--gold); padding:14px 18px; font-size:13.5px; color:var(--ink-soft); margin:18px 0;}
+  .callout b{color:var(--ink);}
+  .backlink{
+    display:inline-block; margin-top:36px; font-family:'IBM Plex Mono', monospace; font-size:12px;
+    color:var(--ink-soft); text-decoration:none; border-bottom:1px solid var(--line); padding-bottom:2px;
+  }
+  .backlink:hover{color:var(--stamp); border-color:var(--stamp);}
+  a.inline{color:var(--stamp); text-decoration:none; border-bottom:1px solid currentColor;}
+  footer{max-width:1040px; margin:20px auto 0; padding:20px 28px 60px; border-top:1px solid var(--line); font-family:'IBM Plex Mono', monospace; font-size:11.5px; color:var(--ink-soft); display:flex; justify-content:space-between; flex-wrap:wrap; gap:8px;}
+  footer a{color:inherit;}
+  @media (max-width:560px){ .page{padding:44px 18px 60px;} }
+</style>
+</head>
+<body>
+
+  <nav class="sitenav mono">
+    <div class="sitenav-inner">
+      <a href="../index.html" class="brand">논문 사이트 카탈로그</a>
+      <div class="sitenav-links">
+        <a href="../index.html">홈</a>
+        <a href="../about.html">사이트 소개</a>
+        <a href="../privacy.html">개인정보처리방침</a>
+      </div>
+    </div>
+  </nav>
+
+  <div class="page">
+    <div class="drawer-tab mono"><span class="dot"></span>GUIDE · GL·FREE-01</div>
+    <div class="tags"><span class="tag region">해외</span><span class="tag free">무료</span><span class="tag region">전분야</span></div>
+    <h1>Google Scholar 200% 활용법</h1>
+
+    <p>Google Scholar는 전 세계에서 가장 널리 쓰이는 학술 검색 엔진입니다. 국내외 논문, 학위논문, 컨퍼런스 자료까지 방대하게 색인하고 있고, 피인용 수와 관련 문헌 정보를 함께 보여줘 논문의 영향력을 가늠하는 데도 유용합니다.</p>
+
+    <h2>무료 원문 찾는 법</h2>
+    <ul>
+      <li>검색 결과 오른쪽에 <b>PDF 또는 링크</b>가 표시되는 경우, 저자나 소속 기관이 공개해둔 무료 버전인 경우가 많습니다. 유료 학술지에 실린 논문도 저자가 프리프린트를 별도로 올려둔 경우가 있으니 꼭 확인해보세요.</li>
+      <li>원문이 유료로만 제공될 때는, 논문 제목을 그대로 복사해 <b>arXiv나 Semantic Scholar에서 다시 검색</b>해보면 무료 버전을 찾을 수 있는 경우가 있습니다.</li>
+      <li>저자 이름으로 검색해 개인 홈페이지나 소속 기관 리포지토리에 게재본이 있는지 확인하는 것도 방법입니다.</li>
+    </ul>
+
+    <h2>인용 정보를 활용한 검색 전략</h2>
+    <ol>
+      <li><b>'인용한 논문 보기'로 최신 연구 추적하기.</b> 오래된 핵심 논문을 찾았다면, 그 논문을 인용한 최근 논문들을 통해 해당 분야의 최신 흐름을 따라갈 수 있습니다.</li>
+      <li><b>'관련 학술자료'로 유사 주제 확장하기.</b> 검색 결과 하나하나마다 관련 문헌이 함께 제공되므로, 검색어를 여러 번 바꾸지 않아도 관련 자료를 빠르게 넓혀갈 수 있습니다.</li>
+      <li><b>내 서재(라이브러리) 기능으로 논문을 저장</b>해두면, 나중에 참고문헌 정리할 때 다시 검색할 필요 없이 모아둔 목록에서 바로 인용 형식을 내보낼 수 있습니다.</li>
+    </ol>
+
+    <h2>주의할 점</h2>
+    <p>Google Scholar는 동료 심사(peer review)를 거치지 않은 자료나 품질이 낮은 문헌도 함께 검색되는 경우가 있습니다. 검색 결과를 그대로 신뢰하기보다, 게재 학술지나 저자의 소속, 피인용 수를 함께 확인하며 걸러내는 습관이 필요합니다.</p>
+
+    <div class="callout"><b>참고 —</b> 의생명 분야는 PubMed, 물리·수학·컴퓨터 분야는 arXiv가 더 정제된 검색 결과를 보여주는 경우가 많으므로 분야에 따라 함께 활용하는 것을 추천합니다.</div>
+
+    <a class="backlink" href="../index.html">← 전체 카탈로그로 돌아가기</a>
+  </div>
+
+  <footer class="mono">
+    <span>PAPER SITE CATALOG · GUIDE</span>
+    <span><a href="../index.html">홈으로</a> · <a href="../about.html">사이트 소개</a></span>
+  </footer>
+
+</body>
+</html>
