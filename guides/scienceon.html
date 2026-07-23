@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ScienceON 활용 가이드 | 논문 사이트 카탈로그</title>
+<meta name="description" content="이공계 논문과 특허를 함께 검색할 수 있는 ScienceON 활용법을 정리했습니다.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://paper-site-catalog.vercel.app/guides/scienceon.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@500;600;700;900&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.css">
+<style>
+  :root{
+    --paper:#e9e3d3; --card:#f7f3e6; --ink:#221f1a; --ink-soft:#5c5646;
+    --stamp:#a4382b; --teal:#2c5a4d; --line:#c5bb9e; --gold:#a9822f;
+  }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  body{
+    background:var(--paper);
+    background-image:repeating-linear-gradient(0deg, rgba(0,0,0,0.015) 0px, rgba(0,0,0,0.015) 1px, transparent 1px, transparent 3px);
+    color:var(--ink); font-family:'Pretendard', sans-serif; line-height:1.75;
+    -webkit-font-smoothing:antialiased;
+  }
+  .mono{font-family:'IBM Plex Mono', monospace; letter-spacing:0.02em;}
+  .serif{font-family:'Noto Serif KR', serif;}
+  .sitenav{background:var(--ink); color:var(--paper);}
+  .sitenav-inner{max-width:1040px; margin:0 auto; padding:14px 28px; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:10px; font-size:12px;}
+  .sitenav-inner .brand{color:var(--paper); text-decoration:none; letter-spacing:0.06em; font-weight:600;}
+  .sitenav-links{display:flex; gap:18px;}
+  .sitenav-links a{color:#cfc7ac; text-decoration:none; transition:color .12s ease;}
+  .sitenav-links a:hover{color:var(--paper);}
+
+  .page{max-width:720px; margin:0 auto; padding:56px 28px 80px;}
+  .drawer-tab{display:inline-flex; align-items:center; gap:10px; background:var(--ink); color:var(--paper); padding:7px 16px 7px 14px; font-size:12.5px; letter-spacing:0.14em; border-radius:2px 2px 0 0;}
+  .drawer-tab .dot{width:6px;height:6px;border-radius:50%;background:var(--stamp);}
+  .tags{margin:14px 0 0; display:flex; gap:6px; flex-wrap:wrap;}
+  .tag{font-family:'IBM Plex Mono', monospace; font-size:10.5px; padding:2px 7px; border-radius:2px; border:1px solid currentColor;}
+  .tag.free{color:var(--teal);}
+  .tag.paid{color:var(--stamp);}
+  .tag.region{color:var(--ink-soft); border-color:var(--line);}
+  h1{
+    font-family:'Noto Serif KR', serif; font-size:clamp(28px,5vw,42px); font-weight:900;
+    margin-top:16px; border-top:3px solid var(--ink); border-bottom:1px solid var(--ink); padding:18px 0 20px;
+  }
+  h2{font-family:'Noto Serif KR', serif; font-size:19px; font-weight:700; margin:34px 0 12px;}
+  p{color:var(--ink-soft); font-size:14.5px; margin-bottom:14px;}
+  ol, ul{margin:0 0 16px 20px;}
+  li{color:var(--ink-soft); font-size:14.5px; margin-bottom:8px;}
+  li b{color:var(--ink);}
+  .callout{background:var(--card); border:1px solid var(--line); border-left:3px solid var(--gold); padding:14px 18px; font-size:13.5px; color:var(--ink-soft); margin:18px 0;}
+  .callout b{color:var(--ink);}
+  .backlink{
+    display:inline-block; margin-top:36px; font-family:'IBM Plex Mono', monospace; font-size:12px;
+    color:var(--ink-soft); text-decoration:none; border-bottom:1px solid var(--line); padding-bottom:2px;
+  }
+  .backlink:hover{color:var(--stamp); border-color:var(--stamp);}
+  a.inline{color:var(--stamp); text-decoration:none; border-bottom:1px solid currentColor;}
+  footer{max-width:1040px; margin:20px auto 0; padding:20px 28px 60px; border-top:1px solid var(--line); font-family:'IBM Plex Mono', monospace; font-size:11.5px; color:var(--ink-soft); display:flex; justify-content:space-between; flex-wrap:wrap; gap:8px;}
+  footer a{color:inherit;}
+  @media (max-width:560px){ .page{padding:44px 18px 60px;} }
+</style>
+</head>
+<body>
+
+  <nav class="sitenav mono">
+    <div class="sitenav-inner">
+      <a href="../index.html" class="brand">논문 사이트 카탈로그</a>
+      <div class="sitenav-links">
+        <a href="../index.html">홈</a>
+        <a href="../about.html">사이트 소개</a>
+        <a href="../privacy.html">개인정보처리방침</a>
+      </div>
+    </div>
+  </nav>
+
+  <div class="page">
+    <div class="drawer-tab mono"><span class="dot"></span>GUIDE · KR·FREE-02</div>
+    <div class="tags"><span class="tag region">국내</span><span class="tag free">무료</span><span class="tag region">이공계</span></div>
+    <h1>ScienceON 활용 가이드</h1>
+
+    <p>ScienceON은 한국과학기술정보연구원(KISTI)이 운영하는 통합 학술 정보 플랫폼입니다. 논문뿐 아니라 특허, 연구보고서, 산업·기술 동향 자료까지 한 번에 검색할 수 있어, 이공계 분야에서 학술 자료와 실무 자료를 함께 참고해야 할 때 특히 유용합니다.</p>
+
+    <h2>다른 논문 사이트와 다른 점</h2>
+    <p>RISS나 DBpia가 학술 논문 중심이라면, ScienceON은 <b>논문과 특허를 연계해서 검색</b>할 수 있다는 점이 큰 차이입니다. 특정 기술이 논문으로는 어떻게 연구되었고, 실제로 어떤 특허로 이어졌는지를 함께 살펴볼 수 있어 산업 동향이나 기술 트렌드를 파악하는 데 강점이 있습니다.</p>
+
+    <h2>활용 팁</h2>
+    <ol>
+      <li><b>기술 키워드로 논문·특허를 함께 검색한다.</b> 같은 키워드로 검색했을 때 논문과 특허 결과가 함께 나오므로, 연구 단계와 상용화 단계를 동시에 파악할 수 있습니다.</li>
+      <li><b>연구보고서를 활용한다.</b> 정부출연연구기관 등에서 발행한 보고서는 학술지 논문보다 더 실무적이고 구체적인 데이터를 담고 있는 경우가 많습니다.</li>
+      <li><b>동향 분석 자료를 참고한다.</b> 특정 기술 분야의 전반적인 흐름을 빠르게 파악하고 싶을 때, 개별 논문을 하나씩 읽기보다 동향보고서를 먼저 훑는 것이 효율적입니다.</li>
+    </ol>
+
+    <h2>이런 사람에게 추천</h2>
+    <p>공학, 자연과학 계열 전공자나 산업 동향까지 함께 조사해야 하는 경우에 적합합니다. 순수 인문·사회과학 자료가 필요하다면 RISS나 DBpia가 더 적합할 수 있습니다.</p>
+
+    <div class="callout"><b>참고 —</b> 논문 원문 접근성은 RISS와 비슷하게 무료로 제공되는 경우가 많지만, 일부 자료는 소속 기관 인증이 필요할 수 있습니다.</div>
+
+    <a class="backlink" href="../index.html">← 전체 카탈로그로 돌아가기</a>
+  </div>
+
+  <footer class="mono">
+    <span>PAPER SITE CATALOG · GUIDE</span>
+    <span><a href="../index.html">홈으로</a> · <a href="../about.html">사이트 소개</a></span>
+  </footer>
+
+</body>
+</html>
