@@ -140,6 +140,69 @@
   }
   .catalog-stamp b{color:var(--ink); font-weight:600;}
 
+  /* ===== MAJOR MATCH PANEL ===== */
+  .match-panel{
+    max-width:1040px; margin:0 auto 40px;
+    padding:26px 28px 30px;
+    background:var(--card);
+    border:1px solid var(--line);
+    border-radius:4px;
+  }
+  .match-head h2{
+    font-size:22px; font-weight:700; margin-top:12px;
+  }
+  .match-desc{
+    font-size:13.5px; color:var(--ink-soft); margin-top:6px; max-width:520px;
+  }
+  .major-grid{
+    display:flex; flex-wrap:wrap; gap:8px;
+    margin-top:18px;
+  }
+  .major-btn{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:12.5px;
+    background:var(--paper);
+    border:1px solid var(--line);
+    color:var(--ink-soft);
+    padding:9px 14px;
+    cursor:pointer;
+    border-radius:3px;
+    transition:all .15s ease;
+  }
+  .major-btn:hover{border-color:var(--gold); color:var(--ink);}
+  .major-btn.active{
+    background:var(--gold); color:var(--paper); border-color:var(--gold);
+  }
+  .match-result{margin-top:22px;}
+  .match-result:empty{margin-top:0;}
+  .match-intro{
+    font-size:13px; color:var(--ink-soft); margin-bottom:14px;
+    border-top:1px dashed var(--line); padding-top:16px;
+  }
+  .match-list{display:flex; flex-direction:column; gap:10px;}
+  .match-item{
+    display:flex; gap:14px; align-items:flex-start;
+    background:var(--paper);
+    border:1px solid var(--line);
+    border-left:3px solid var(--gold);
+    padding:12px 16px;
+    border-radius:3px;
+  }
+  .match-rank{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:16px; font-weight:600; color:var(--gold);
+    min-width:22px;
+  }
+  .match-item-body{flex:1;}
+  .match-item-name{
+    font-family:'Noto Serif KR', serif; font-weight:700; font-size:15.5px;
+    margin-bottom:3px;
+  }
+  .match-item-name a{color:var(--ink); text-decoration:none; border-bottom:1px solid var(--line);}
+  .match-item-name a:hover{color:var(--stamp); border-color:var(--stamp);}
+  .match-item-reason{font-size:13px; color:var(--ink-soft);}
+  .match-item-tags{margin-top:6px; display:flex; gap:5px;}
+
   /* ===== FILTER TABS ===== */
   .filters{
     max-width:1040px; margin:0 auto;
@@ -375,13 +438,33 @@
     <div class="drawer-tab mono"><span class="dot"></span>CATALOG · DRAWER 03</div>
     <h1 class="hero-title serif">논문 사이트<br><span>색인 카탈로그</span></h1>
     <div class="hero-sub">
-      <p>국내·해외 학술 데이터베이스를 무료/유료, 분야별로 정리한 색인입니다. 원하는 항목을 눌러 조건에 맞는 사이트만 골라보세요.</p>
+      <p>국내·해외 학술 데이터베이스를 무료/유료, 분야별로 정리한 색인입니다. 아래에서 전공을 고르면 우선순위대로 추천해드리고, 원하는 조건으로 직접 필터링도 가능합니다.</p>
       <div class="catalog-stamp mono">
         수록 항목 <b>14</b>건<br>
         분류 기준 <b>지역 · 비용 · 분야</b><br>
         최종 정리 <b>2026</b>
       </div>
     </div>
+  </div>
+
+  <div class="match-panel" id="matchPanel">
+    <div class="match-head">
+      <div class="drawer-tab mono"><span class="dot"></span>QUICK MATCH</div>
+      <h2 class="serif">내 전공엔 어떤 사이트가 맞을까?</h2>
+      <p class="match-desc">전공을 고르면, 그 분야에서 가장 먼저 확인하면 좋은 사이트 순서대로 알려드립니다.</p>
+    </div>
+    <div class="major-grid mono" id="majorGrid">
+      <button class="major-btn" data-major="psych">심리학</button>
+      <button class="major-btn" data-major="medical">의학·간호·보건</button>
+      <button class="major-btn" data-major="eng">공학·컴퓨터</button>
+      <button class="major-btn" data-major="phys">물리·수학</button>
+      <button class="major-btn" data-major="humanities">인문학</button>
+      <button class="major-btn" data-major="social">사회과학</button>
+      <button class="major-btn" data-major="business">경영·경제</button>
+      <button class="major-btn" data-major="edu">교육학</button>
+      <button class="major-btn" data-major="bio">생명·자연과학</button>
+    </div>
+    <div class="match-result" id="matchResult"></div>
   </div>
 
   <div class="filters mono" id="filters">
@@ -546,6 +629,128 @@ document.getElementById('filters').addEventListener('click', (e) => {
   btn.classList.add('active');
   const f = btn.dataset.filter;
   render(f === 'all' ? sites : sites.filter(s => s.cat === f));
+});
+
+// ===== 전공별 사이트 매칭 =====
+const majorMatch = {
+  psych: {
+    label: "심리학",
+    intro: "심리학은 임상·신경과학 쪽 자료는 PubMed, 국내 선행연구는 RISS가 기본입니다. 전문 DB(PsycINFO)는 기관 구독이 있을 때 가장 정교합니다.",
+    picks: [
+      {code:"GL·FREE-02", reason:"정신건강, 임상심리, 신경과학 관련 논문이 풍부한 의생명 표준 DB입니다."},
+      {code:"KR·FREE-01", reason:"국내 심리학 학위논문과 선행연구 흐름을 파악하기 가장 좋습니다."},
+      {code:"GL·FREE-01", reason:"국내외 자료를 폭넓게 훑고 싶을 때 보완용으로 함께 검색하세요."},
+      {code:"SP-01", reason:"기관 구독이 있다면, 심리학 주제어 분류가 가장 정교한 전문 DB입니다."},
+    ]
+  },
+  medical: {
+    label: "의학·간호·보건",
+    intro: "의생명 분야는 PubMed가 사실상 표준입니다. 국내 임상 사례나 간호학 연구는 RISS·DBpia를 함께 확인하세요.",
+    picks: [
+      {code:"GL·FREE-02", reason:"의학·간호·보건 분야의 기본 검색처. Free full text 필터로 무료 원문만 추릴 수 있습니다."},
+      {code:"KR·FREE-01", reason:"국내 간호학·보건학 학위논문과 임상 연구를 확인하기 좋습니다."},
+      {code:"GL·FREE-01", reason:"인용 수 기반으로 핵심 논문을 빠르게 골라낼 때 유용합니다."},
+    ]
+  },
+  eng: {
+    label: "공학·컴퓨터",
+    intro: "컴퓨터공학·AI는 arXiv에 최신 연구가 가장 먼저 올라옵니다. 특허까지 함께 봐야 한다면 ScienceON을 활용하세요.",
+    picks: [
+      {code:"GL·FREE-03", reason:"AI, 컴퓨터공학 분야 최신 연구가 정식 게재보다 먼저 공개되는 곳입니다."},
+      {code:"KR·FREE-02", reason:"논문과 특허를 함께 검색할 수 있어 기술 동향 파악에 강점이 있습니다."},
+      {code:"GL·FREE-01", reason:"인용 관계와 관련 논문 추천으로 검색 범위를 넓히기 좋습니다."},
+    ]
+  },
+  phys: {
+    label: "물리·수학",
+    intro: "물리학·수학은 arXiv가 기본 검색처입니다. 국내 이공계 동향은 ScienceON으로 보완하세요.",
+    picks: [
+      {code:"GL·FREE-03", reason:"물리학·수학 분야 프리프린트가 가장 활발하게 공유되는 아카이브입니다."},
+      {code:"GL·FREE-01", reason:"정식 게재 여부와 피인용 수를 함께 확인할 때 사용하세요."},
+      {code:"KR·FREE-02", reason:"국내 이공계 연구보고서와 기술 동향을 함께 살펴볼 수 있습니다."},
+    ]
+  },
+  humanities: {
+    label: "인문학",
+    intro: "인문학은 DBpia·RISS가 국내 자료의 중심입니다. 고전·희귀 자료가 필요하면 JSTOR를 확인하세요.",
+    picks: [
+      {code:"KR·PAID-01", reason:"인문·사회과학 학술지가 특히 풍부하게 수록돼 있습니다."},
+      {code:"KR·FREE-01", reason:"국내 인문학 학위논문과 선행연구를 무료로 확인할 수 있습니다."},
+      {code:"GL·PAID-02", reason:"고전·희귀 학술지 아카이브가 필요할 때 확인해보세요."},
+    ]
+  },
+  social: {
+    label: "사회과학",
+    intro: "사회과학은 국내 자료 중심이라면 DBpia·RISS, 해외 통계·동향 자료는 Google Scholar로 보완하는 조합이 좋습니다.",
+    picks: [
+      {code:"KR·PAID-01", reason:"정치, 행정, 사회학 등 사회과학 학술지가 폭넓게 수록돼 있습니다."},
+      {code:"KR·FREE-01", reason:"국내 사회과학 학위논문의 선행연구 흐름을 파악하기 좋습니다."},
+      {code:"GL·FREE-01", reason:"해외 사례 연구나 비교 연구가 필요할 때 함께 검색하세요."},
+    ]
+  },
+  business: {
+    label: "경영·경제",
+    intro: "경영·경제는 DBpia와 KISS를 교차 검색하는 것이 자료 누락을 줄이는 방법입니다.",
+    picks: [
+      {code:"KR·PAID-01", reason:"경영학·경제학 학술지 수록이 풍부해 기본 검색처로 적합합니다."},
+      {code:"KR·PAID-02", reason:"DBpia에 없는 학술지가 등록된 경우가 있어 교차 검색용으로 유용합니다."},
+      {code:"GL·FREE-01", reason:"해외 저널이나 최신 비즈니스 연구를 확인할 때 활용하세요."},
+    ]
+  },
+  edu: {
+    label: "교육학",
+    intro: "교육학은 국내 학위논문 비중이 커서 RISS가 특히 유용하고, DBpia로 학술지 논문을 보완하세요.",
+    picks: [
+      {code:"KR·FREE-01", reason:"교육학 학위논문이 특히 많이 등록돼 있어 우선 검색처로 적합합니다."},
+      {code:"KR·PAID-01", reason:"교육학 학술지 논문을 폭넓게 확인할 수 있습니다."},
+      {code:"GL·FREE-01", reason:"해외 교육 정책·이론 연구를 함께 살펴볼 때 활용하세요."},
+    ]
+  },
+  bio: {
+    label: "생명·자연과학",
+    intro: "생명과학은 PubMed, 자연과학 전반은 ScienceON·Google Scholar 조합을 추천합니다.",
+    picks: [
+      {code:"GL·FREE-02", reason:"생명과학·의생명 분야 연구를 폭넓게 다루는 표준 DB입니다."},
+      {code:"KR·FREE-02", reason:"국내 이공계 연구보고서와 논문·특허를 함께 검색할 수 있습니다."},
+      {code:"GL·FREE-01", reason:"최신 연구와 인용 관계를 함께 확인할 때 사용하세요."},
+    ]
+  },
+};
+
+const majorGrid = document.getElementById('majorGrid');
+const matchResult = document.getElementById('matchResult');
+
+majorGrid.addEventListener('click', (e) => {
+  const btn = e.target.closest('.major-btn');
+  if(!btn) return;
+  document.querySelectorAll('.major-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+
+  const m = majorMatch[btn.dataset.major];
+  if(!m) return;
+
+  const itemsHtml = m.picks.map((pick, i) => {
+    const site = sites.find(s => s.code === pick.code);
+    if(!site) return '';
+    return `
+      <div class="match-item">
+        <div class="match-rank mono">${i + 1}</div>
+        <div class="match-item-body">
+          <div class="match-item-name"><a href="${site.url}" target="_blank" rel="noopener">${site.name}</a></div>
+          <div class="match-item-reason">${pick.reason}</div>
+          <div class="match-item-tags">
+            <span class="tag region">${site.region}</span>
+            <span class="tag ${site.cost}">${site.cost === 'free' ? '무료' : '구독형'}</span>
+          </div>
+        </div>
+      </div>
+    `;
+  }).join('');
+
+  matchResult.innerHTML = `
+    <div class="match-intro"><b>${m.label}</b> — ${m.intro}</div>
+    <div class="match-list">${itemsHtml}</div>
+  `;
 });
 </script>
 </body>
