@@ -399,6 +399,30 @@
   }
   .tip b{display:block; color:var(--ink); font-size:14px; margin-bottom:6px; font-weight:700;}
 
+  /* ===== ESSAY (도입 콘텐츠) ===== */
+  .essay{
+    max-width:760px; margin:64px auto 0;
+    padding:0 28px;
+  }
+  .essay-head h2{
+    font-family:'Noto Serif KR', serif;
+    font-size:clamp(24px,4vw,32px); font-weight:800;
+    margin-top:14px;
+    border-top:3px solid var(--ink);
+    padding-top:16px;
+  }
+  .essay p{
+    font-size:14.5px;
+    color:var(--ink-soft);
+    line-height:1.85;
+    margin-bottom:16px;
+  }
+  .essay h3{
+    font-size:17.5px; font-weight:700;
+    margin:30px 0 10px;
+    color:var(--ink);
+  }
+
   footer{
     max-width:1040px; margin:70px auto 0;
     padding:20px 28px 60px;
@@ -519,6 +543,26 @@
     </div>
   </div>
 
+  <div class="essay">
+    <div class="essay-head">
+      <div class="drawer-tab mono"><span class="dot"></span>READING · 논문 사이트 고르는 법</div>
+      <h2 class="serif">논문 사이트, 왜 하나로는 부족할까</h2>
+    </div>
+
+    <p>처음 논문을 찾아야 하는 사람이 가장 먼저 겪는 혼란은 "어디서 찾아야 하는지" 자체를 모른다는 것입니다. RISS에 검색했더니 원하는 논문이 없고, DBpia에서는 유료로 막혀 있고, Google Scholar에서는 관련 없는 자료가 잔뜩 섞여 나옵니다. 이건 검색을 잘못해서가 아니라, 애초에 각 사이트가 커버하는 범위가 다르기 때문입니다.</p>
+
+    <p>국내 사이트들(RISS, DBpia, KISS, ScienceON)은 저마다 계약을 맺은 학술지와 협력 기관이 다릅니다. 어떤 학술지는 DBpia에만, 어떤 학위논문은 RISS에만 등록되어 있는 식입니다. 그래서 "국내 자료를 찾는다"는 목적이라도, 실제로는 최소 두 곳 이상을 교차로 검색해야 누락 없이 자료를 모을 수 있습니다. 해외 자료도 마찬가지입니다. 의학·생명과학은 PubMed가 사실상 표준이지만, 컴퓨터공학이나 물리학 최신 연구는 arXiv에 먼저 올라오고, 인문·사회과학 오래된 아카이브는 JSTOR가 강합니다. 분야마다 "먼저 봐야 할 사이트"가 다른 셈입니다.</p>
+
+    <h3 class="serif">무료와 유료의 경계는 생각보다 흐릿하다</h3>
+    <p>DBpia나 KISS, Web of Science처럼 기본적으로 유료인 사이트도, 소속 대학이 기관 구독을 맺고 있으면 도서관 홈페이지를 거쳐 들어가는 것만으로 무료로 원문을 볼 수 있습니다. 반대로 RISS나 Google Scholar처럼 기본적으로 무료인 사이트도, 일부 원문은 저작권 문제로 열람이 제한된 경우가 있습니다. 즉 "이 사이트는 무료다/유료다"라고 단정하기보다는, 접속 경로(직접 접속인지, 학교 도서관을 거친 접속인지)에 따라 상황이 달라진다고 이해하는 편이 정확합니다.</p>
+
+    <h3 class="serif">검색 순서를 정하면 시간이 줄어든다</h3>
+    <p>많은 사람이 논문을 찾을 때 Google Scholar부터 시작하는데, 이는 나쁘지 않은 선택이지만 국내 학위논문처럼 Google Scholar에 잘 잡히지 않는 자료도 있습니다. 효율을 높이려면 목적에 따라 시작점을 다르게 잡는 것이 좋습니다. 국내 선행연구를 넓게 훑어야 한다면 RISS에서 학위논문부터 시작하고, 최신 학술지 논문이 필요하다면 DBpia나 KISS를, 해외 최신 연구 동향이 필요하다면 분야에 맞는 사이트(의학은 PubMed, 이공계는 arXiv)를 먼저 확인하는 식입니다. 이 페이지의 "내 전공엔 어떤 사이트가 맞을까" 도구는 이 판단을 대신해주기 위해 만들었습니다.</p>
+
+    <h3 class="serif">한 편의 좋은 논문이 열 번의 검색보다 낫다</h3>
+    <p>키워드를 여러 번 바꿔가며 검색하는 것보다, 주제와 잘 맞는 논문 한 편을 먼저 찾은 뒤 그 논문이 인용한 문헌과 그 논문을 인용한 후속 연구를 따라가는 방식이 훨씬 효율적인 경우가 많습니다. Google Scholar와 Semantic Scholar는 이 인용 관계를 시각적으로 보여주기 때문에, 검색어를 고민하는 대신 "괜찮은 논문 한 편"을 먼저 찾는 데 시간을 쓰는 것이 결과적으로 더 빠릅니다.</p>
+  </div>
+
   <footer class="mono">
     <span>PAPER SITE CATALOG</span>
     <span><a href="about.html" style="color:inherit;">사이트 소개</a> · <a href="privacy.html" style="color:inherit;">개인정보처리방침</a></span>
@@ -534,7 +578,7 @@ const sites = [
    desc:"KISTI 운영. 논문뿐 아니라 특허, 연구보고서, 동향 자료까지 통합 검색되는 이공계 중심 플랫폼.",
    tip:"논문-특허 연계 검색이 강점이라 이공계 산업 동향 파악에 유용.",
    plus:"논문+특허 통합 검색", minus:"인문·사회 자료는 상대적으로 적음"},
-  {code:"KR·FREE-03", name:"국회전자도서관", url:"https://dl.nanet.go.kr", region:"국내", cost:"free", field:"전분야", cat:"kr-free",
+  {code:"KR·FREE-03", name:"국회전자도서관", url:"https://dl.nanet.go.kr", guide:"guides/assembly-library.html", region:"국내", cost:"free", field:"전분야", cat:"kr-free",
    desc:"국회도서관이 제공하는 학술 데이터베이스. 국내 학술지, 학위논문, 세미나 자료를 폭넓게 무료 제공.",
    tip:"타 사이트에 없는 오래된 학위논문이나 정책 자료를 찾을 때 보완적으로 활용.",
    plus:"오래된 자료·정책 문헌 강함", minus:"검색 UI가 다소 불편"},
@@ -566,19 +610,19 @@ const sites = [
    desc:"AI 기반 학술 검색 엔진. 논문 간 인용 관계를 시각화하고 핵심 요약을 자동 제공.",
    tip:"'Highly Influential Citations' 지표로 실제로 많이 참고된 논문만 빠르게 골라낼 수 있음.",
    plus:"AI 요약·인용 관계 시각화", minus:"일부 분야는 커버리지가 얇음"},
-  {code:"GL·FREE-05", name:"DOAJ", url:"https://doaj.org", region:"해외", cost:"free", field:"전분야", cat:"global-free",
+  {code:"GL·FREE-05", name:"DOAJ", url:"https://doaj.org", guide:"guides/doaj.html", region:"해외", cost:"free", field:"전분야", cat:"global-free",
    desc:"오픈 액세스 학술지만 모아놓은 디렉토리. 등재된 모든 논문 원문을 무료로 열람 가능.",
    tip:"오픈 액세스 학술지인지 아닌지 헷갈릴 때 등재 여부를 확인하는 용도로 활용 가능.",
    plus:"전부 무료·합법 오픈 액세스", minus:"일부 최신·인기 학술지는 미등재"},
-  {code:"GL·PAID-01", name:"Web of Science", url:"https://www.webofscience.com", region:"해외", cost:"paid", field:"전분야", cat:"global-paid",
+  {code:"GL·PAID-01", name:"Web of Science", url:"https://www.webofscience.com", guide:"guides/web-of-science.html", region:"해외", cost:"paid", field:"전분야", cat:"global-paid",
    desc:"클래리베이트 운영. 학술지 영향력 지수(IF) 산정 기준으로도 쓰이는 권위 있는 인용 색인 DB.",
    tip:"학교 도서관 구독이 있다면 인용 분석 기능으로 특정 주제의 핵심 논문을 빠르게 추릴 수 있음.",
    plus:"공신력 높은 인용 지표 제공", minus:"개인 구독은 비용 부담 큼"},
-  {code:"GL·PAID-02", name:"JSTOR", url:"https://www.jstor.org", region:"해외", cost:"paid", field:"인문·사회", cat:"global-paid",
+  {code:"GL·PAID-02", name:"JSTOR", url:"https://www.jstor.org", guide:"guides/jstor.html", region:"해외", cost:"paid", field:"인문·사회", cat:"global-paid",
    desc:"인문·사회과학 분야의 오래된 학술지 아카이브까지 폭넓게 보유한 디지털 라이브러리.",
    tip:"무료 계정으로도 월 일정 개수까지는 열람 가능한 'Register & Read' 제도가 있음.",
    plus:"고전·희귀 학술지 아카이브 풍부", minus:"최신 호는 엠바고로 제한되는 경우 있음"},
-  {code:"SP-01", name:"PsycINFO", url:"https://www.apa.org/pubs/databases/psycinfo", region:"해외", cost:"paid", field:"심리학", cat:"special",
+  {code:"SP-01", name:"PsycINFO", url:"https://www.apa.org/pubs/databases/psycinfo", guide:"guides/psycinfo.html", region:"해외", cost:"paid", field:"심리학", cat:"special",
    desc:"미국심리학회(APA) 운영. 심리학·행동과학 분야 논문을 가장 세밀하게 분류해 검색할 수 있는 전문 DB.",
    tip:"주제어(Subject Heading) 검색을 활용하면 같은 개념의 다른 표현까지 놓치지 않고 찾을 수 있음.",
    plus:"심리학 분야 색인 정교함 최고 수준", minus:"기관 구독 없이는 접근 어려움"},

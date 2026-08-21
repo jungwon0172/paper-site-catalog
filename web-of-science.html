@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Web of Science 활용 Q&A | 논문 사이트 카탈로그</title>
+<meta name="description" content="학술지 영향력 지수 산정 기준으로 쓰이는 Web of Science 이용법을 Q&A로 정리했습니다.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://paper-site-catalog.vercel.app/guides/web-of-science.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@500;600;700;900&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.css">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2557338953436433" crossorigin="anonymous"></script>
+<style>
+  :root{
+    --paper:#e9e3d3; --card:#f7f3e6; --ink:#221f1a; --ink-soft:#5c5646;
+    --stamp:#a4382b; --teal:#2c5a4d; --line:#c5bb9e; --gold:#a9822f;
+  }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  body{
+    background:var(--paper);
+    background-image:repeating-linear-gradient(0deg, rgba(0,0,0,0.015) 0px, rgba(0,0,0,0.015) 1px, transparent 1px, transparent 3px);
+    color:var(--ink); font-family:'Pretendard', sans-serif; line-height:1.75;
+    -webkit-font-smoothing:antialiased;
+  }
+  .mono{font-family:'IBM Plex Mono', monospace; letter-spacing:0.02em;}
+  .serif{font-family:'Noto Serif KR', serif;}
+  .sitenav{background:var(--ink); color:var(--paper);}
+  .sitenav-inner{max-width:1040px; margin:0 auto; padding:14px 28px; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:10px; font-size:12px;}
+  .sitenav-inner .brand{color:var(--paper); text-decoration:none; letter-spacing:0.06em; font-weight:600;}
+  .sitenav-links{display:flex; gap:18px;}
+  .sitenav-links a{color:#cfc7ac; text-decoration:none; transition:color .12s ease;}
+  .sitenav-links a:hover{color:var(--paper);}
+
+  .page{max-width:720px; margin:0 auto; padding:56px 28px 80px;}
+  .drawer-tab{display:inline-flex; align-items:center; gap:10px; background:var(--ink); color:var(--paper); padding:7px 16px 7px 14px; font-size:12.5px; letter-spacing:0.14em; border-radius:2px 2px 0 0;}
+  .drawer-tab .dot{width:6px;height:6px;border-radius:50%;background:var(--stamp);}
+  .tags{margin:14px 0 0; display:flex; gap:6px; flex-wrap:wrap;}
+  .tag{font-family:'IBM Plex Mono', monospace; font-size:10.5px; padding:2px 7px; border-radius:2px; border:1px solid currentColor;}
+  .tag.free{color:var(--teal);}
+  .tag.paid{color:var(--stamp);}
+  .tag.region{color:var(--ink-soft); border-color:var(--line);}
+  h1{
+    font-family:'Noto Serif KR', serif; font-size:clamp(28px,5vw,42px); font-weight:900;
+    margin-top:16px; border-top:3px solid var(--ink); border-bottom:1px solid var(--ink); padding:18px 0 20px;
+  }
+  .lede{font-size:14.5px; color:var(--ink-soft); margin:16px 0 8px;}
+  .qa{margin-top:8px;}
+  .qa-item{border-top:1px dashed var(--line); padding:22px 0;}
+  .qa-item:first-child{border-top:none; padding-top:26px;}
+  .qa-q{
+    font-family:'Noto Serif KR', serif; font-size:17px; font-weight:700;
+    color:var(--ink); margin-bottom:10px;
+    display:flex; gap:10px;
+  }
+  .qa-q .qmark{color:var(--gold); font-family:'IBM Plex Mono', monospace; font-weight:600;}
+  .qa-a{font-size:14.5px; color:var(--ink-soft); padding-left:26px;}
+  .qa-a b{color:var(--ink);}
+  .callout{background:var(--card); border:1px solid var(--line); border-left:3px solid var(--gold); padding:14px 18px; font-size:13.5px; color:var(--ink-soft); margin:22px 0;}
+  .callout b{color:var(--ink);}
+  .backlink{
+    display:inline-block; margin-top:36px; font-family:'IBM Plex Mono', monospace; font-size:12px;
+    color:var(--ink-soft); text-decoration:none; border-bottom:1px solid var(--line); padding-bottom:2px;
+  }
+  .backlink:hover{color:var(--stamp); border-color:var(--stamp);}
+  footer{max-width:1040px; margin:20px auto 0; padding:20px 28px 60px; border-top:1px solid var(--line); font-family:'IBM Plex Mono', monospace; font-size:11.5px; color:var(--ink-soft); display:flex; justify-content:space-between; flex-wrap:wrap; gap:8px;}
+  footer a{color:inherit;}
+  @media (max-width:560px){ .page{padding:44px 18px 60px;} }
+</style>
+</head>
+<body>
+
+  <nav class="sitenav mono">
+    <div class="sitenav-inner">
+      <a href="../index.html" class="brand">논문 사이트 카탈로그</a>
+      <div class="sitenav-links">
+        <a href="../index.html">홈</a>
+        <a href="../about.html">사이트 소개</a>
+        <a href="../privacy.html">개인정보처리방침</a>
+      </div>
+    </div>
+  </nav>
+
+  <div class="page">
+    <div class="drawer-tab mono"><span class="dot"></span>Q&A · GL·PAID-01</div>
+    <div class="tags"><span class="tag region">해외</span><span class="tag paid">구독형</span><span class="tag region">전분야</span></div>
+    <h1>Web of Science, 꼭 필요한 사람은 누구일까</h1>
+    <p class="lede">개인 구독 비용이 크기 때문에, 학교 계정으로 접근 가능한지부터 확인하는 게 먼저입니다.</p>
+    <div class="qa">
+
+      <div class="qa-item">
+        <div class="qa-q"><span class="qmark">Q.</span> Web of Science는 왜 이렇게 자주 언급되나요?</div>
+        <div class="qa-a">학술지의 영향력 지수(Impact Factor)를 산정하는 기준 데이터베이스로 쓰이기 때문입니다. 특정 학술지가 어느 정도 공신력이 있는지, 논문이 얼마나 인용됐는지를 확인할 때 학계에서 표준처럼 참고됩니다.</div>
+      </div>
+      <div class="qa-item">
+        <div class="qa-q"><span class="qmark">Q.</span> Google Scholar로는 부족한가요?</div>
+        <div class="qa-a">용도가 다릅니다. Google Scholar는 커버리지가 넓지만 인용 지표의 정밀도나 공신력 면에서는 Web of Science가 더 엄격하게 관리됩니다. 논문 투고 시 학술지의 등재 여부나 지수를 확인해야 하는 경우 Web of Science 쪽이 기준으로 쓰입니다.</div>
+      </div>
+      <div class="qa-item">
+        <div class="qa-q"><span class="qmark">Q.</span> 개인이 구독해도 되나요?</div>
+        <div class="qa-a">가능은 하지만 비용 부담이 큽니다. 대부분의 대학이 기관 구독을 하고 있으므로, 먼저 <b>학교 도서관 홈페이지</b>에서 Web of Science 접근이 가능한지 확인하는 것이 우선입니다.</div>
+      </div>
+      <div class="qa-item">
+        <div class="qa-q"><span class="qmark">Q.</span> 학부생도 써야 하나요?</div>
+        <div class="qa-a">학부 과제 수준이라면 꼭 필요하지는 않습니다. 대학원 진학을 준비하거나 논문 투고를 고려하는 단계, 혹은 특정 학술지의 신뢰도를 검증해야 하는 경우에 주로 활용하게 됩니다.</div>
+      </div>
+    </div>
+    <a class="backlink" href="../index.html">← 전체 카탈로그로 돌아가기</a>
+  </div>
+
+  <footer class="mono">
+    <span>PAPER SITE CATALOG · GUIDE</span>
+    <span><a href="../index.html">홈으로</a> · <a href="../about.html">사이트 소개</a></span>
+  </footer>
+
+</body>
+</html>

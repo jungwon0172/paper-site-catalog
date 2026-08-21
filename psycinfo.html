@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PsycINFO 이용 Q&A | 논문 사이트 카탈로그</title>
+<meta name="description" content="심리학·행동과학 전문 데이터베이스 PsycINFO 활용법을 Q&A로 정리했습니다.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://paper-site-catalog.vercel.app/guides/psycinfo.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@500;600;700;900&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.css">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2557338953436433" crossorigin="anonymous"></script>
+<style>
+  :root{
+    --paper:#e9e3d3; --card:#f7f3e6; --ink:#221f1a; --ink-soft:#5c5646;
+    --stamp:#a4382b; --teal:#2c5a4d; --line:#c5bb9e; --gold:#a9822f;
+  }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  body{
+    background:var(--paper);
+    background-image:repeating-linear-gradient(0deg, rgba(0,0,0,0.015) 0px, rgba(0,0,0,0.015) 1px, transparent 1px, transparent 3px);
+    color:var(--ink); font-family:'Pretendard', sans-serif; line-height:1.75;
+    -webkit-font-smoothing:antialiased;
+  }
+  .mono{font-family:'IBM Plex Mono', monospace; letter-spacing:0.02em;}
+  .serif{font-family:'Noto Serif KR', serif;}
+  .sitenav{background:var(--ink); color:var(--paper);}
+  .sitenav-inner{max-width:1040px; margin:0 auto; padding:14px 28px; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:10px; font-size:12px;}
+  .sitenav-inner .brand{color:var(--paper); text-decoration:none; letter-spacing:0.06em; font-weight:600;}
+  .sitenav-links{display:flex; gap:18px;}
+  .sitenav-links a{color:#cfc7ac; text-decoration:none; transition:color .12s ease;}
+  .sitenav-links a:hover{color:var(--paper);}
+
+  .page{max-width:720px; margin:0 auto; padding:56px 28px 80px;}
+  .drawer-tab{display:inline-flex; align-items:center; gap:10px; background:var(--ink); color:var(--paper); padding:7px 16px 7px 14px; font-size:12.5px; letter-spacing:0.14em; border-radius:2px 2px 0 0;}
+  .drawer-tab .dot{width:6px;height:6px;border-radius:50%;background:var(--stamp);}
+  .tags{margin:14px 0 0; display:flex; gap:6px; flex-wrap:wrap;}
+  .tag{font-family:'IBM Plex Mono', monospace; font-size:10.5px; padding:2px 7px; border-radius:2px; border:1px solid currentColor;}
+  .tag.free{color:var(--teal);}
+  .tag.paid{color:var(--stamp);}
+  .tag.region{color:var(--ink-soft); border-color:var(--line);}
+  h1{
+    font-family:'Noto Serif KR', serif; font-size:clamp(28px,5vw,42px); font-weight:900;
+    margin-top:16px; border-top:3px solid var(--ink); border-bottom:1px solid var(--ink); padding:18px 0 20px;
+  }
+  .lede{font-size:14.5px; color:var(--ink-soft); margin:16px 0 8px;}
+  .qa{margin-top:8px;}
+  .qa-item{border-top:1px dashed var(--line); padding:22px 0;}
+  .qa-item:first-child{border-top:none; padding-top:26px;}
+  .qa-q{
+    font-family:'Noto Serif KR', serif; font-size:17px; font-weight:700;
+    color:var(--ink); margin-bottom:10px;
+    display:flex; gap:10px;
+  }
+  .qa-q .qmark{color:var(--gold); font-family:'IBM Plex Mono', monospace; font-weight:600;}
+  .qa-a{font-size:14.5px; color:var(--ink-soft); padding-left:26px;}
+  .qa-a b{color:var(--ink);}
+  .callout{background:var(--card); border:1px solid var(--line); border-left:3px solid var(--gold); padding:14px 18px; font-size:13.5px; color:var(--ink-soft); margin:22px 0;}
+  .callout b{color:var(--ink);}
+  .backlink{
+    display:inline-block; margin-top:36px; font-family:'IBM Plex Mono', monospace; font-size:12px;
+    color:var(--ink-soft); text-decoration:none; border-bottom:1px solid var(--line); padding-bottom:2px;
+  }
+  .backlink:hover{color:var(--stamp); border-color:var(--stamp);}
+  footer{max-width:1040px; margin:20px auto 0; padding:20px 28px 60px; border-top:1px solid var(--line); font-family:'IBM Plex Mono', monospace; font-size:11.5px; color:var(--ink-soft); display:flex; justify-content:space-between; flex-wrap:wrap; gap:8px;}
+  footer a{color:inherit;}
+  @media (max-width:560px){ .page{padding:44px 18px 60px;} }
+</style>
+</head>
+<body>
+
+  <nav class="sitenav mono">
+    <div class="sitenav-inner">
+      <a href="../index.html" class="brand">논문 사이트 카탈로그</a>
+      <div class="sitenav-links">
+        <a href="../index.html">홈</a>
+        <a href="../about.html">사이트 소개</a>
+        <a href="../privacy.html">개인정보처리방침</a>
+      </div>
+    </div>
+  </nav>
+
+  <div class="page">
+    <div class="drawer-tab mono"><span class="dot"></span>Q&A · SP-01</div>
+    <div class="tags"><span class="tag region">해외</span><span class="tag paid">구독형</span><span class="tag region">심리학</span></div>
+    <h1>PsycINFO, 심리학 전공이라면 알아둘 것</h1>
+    <p class="lede">심리학 분야 주제어 분류가 가장 정교한 전문 DB로, 기관 구독이 있을 때 진가를 발휘합니다.</p>
+    <div class="qa">
+
+      <div class="qa-item">
+        <div class="qa-q"><span class="qmark">Q.</span> PubMed로는 부족한가요?</div>
+        <div class="qa-a">PubMed도 정신건강·임상심리 관련 논문을 다루지만, PsycINFO는 <b>미국심리학회(APA)가 직접 운영</b>하는 심리학 전문 DB라 심리학·행동과학 논문의 분류와 주제어 체계가 훨씬 세밀합니다. 심리학을 전공한다면 PubMed와 함께 병행할 가치가 있습니다.</div>
+      </div>
+      <div class="qa-item">
+        <div class="qa-q"><span class="qmark">Q.</span> 주제어(Subject Heading) 검색이 왜 중요한가요?</div>
+        <div class="qa-a">같은 심리학 개념이라도 논문마다 다른 용어로 표현되는 경우가 많은데, 주제어 검색을 활용하면 <b>표현이 달라도 같은 개념을 다룬 논문</b>을 놓치지 않고 찾을 수 있습니다.</div>
+      </div>
+      <div class="qa-item">
+        <div class="qa-q"><span class="qmark">Q.</span> 기관 구독 없이도 쓸 수 있나요?</div>
+        <div class="qa-a">쉽지 않습니다. PsycINFO는 대부분 대학 도서관을 통한 기관 구독으로 접근하며, 개인이 직접 구독하기에는 비용 부담이 큽니다. 소속 대학이 구독 중인지 도서관 데이터베이스 목록에서 먼저 확인하는 것이 좋습니다.</div>
+      </div>
+      <div class="qa-item">
+        <div class="qa-q"><span class="qmark">Q.</span> 접근이 어렵다면 대안은 없나요?</div>
+        <div class="qa-a">PubMed에서 정신건강·심리학 관련 키워드로 검색하거나, Google Scholar와 Semantic Scholar로 관련 논문을 찾는 방법이 있습니다. 다만 심리학 특유의 세밀한 주제 분류까지는 대체하기 어렵습니다.</div>
+      </div>
+    </div>
+    <a class="backlink" href="../index.html">← 전체 카탈로그로 돌아가기</a>
+  </div>
+
+  <footer class="mono">
+    <span>PAPER SITE CATALOG · GUIDE</span>
+    <span><a href="../index.html">홈으로</a> · <a href="../about.html">사이트 소개</a></span>
+  </footer>
+
+</body>
+</html>
