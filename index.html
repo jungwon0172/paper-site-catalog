@@ -423,6 +423,49 @@
     color:var(--ink);
   }
 
+  /* ===== ARTICLE LINKS ===== */
+  .article-links{
+    max-width:1040px; margin:60px auto 0;
+    padding:0 28px;
+  }
+  .article-links-head h2{
+    font-size:24px; font-weight:700;
+    margin-top:12px;
+    border-top:3px solid var(--ink);
+    padding-top:14px;
+  }
+  .article-links-desc{
+    font-size:13.5px; color:var(--ink-soft); margin-top:6px;
+  }
+  .article-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit, minmax(230px,1fr));
+    gap:14px;
+    margin-top:22px;
+  }
+  .article-card{
+    display:block;
+    background:var(--card);
+    border:1px solid var(--line);
+    border-radius:4px;
+    padding:18px 18px 20px;
+    text-decoration:none;
+    transition:transform .15s ease, box-shadow .15s ease;
+  }
+  .article-card:hover{
+    transform:translateY(-2px);
+    box-shadow:0 6px 14px rgba(34,31,26,0.08);
+    border-color:var(--gold);
+  }
+  .article-card-tag{
+    font-size:10.5px; color:var(--gold); letter-spacing:0.08em; margin-bottom:10px;
+  }
+  .article-card-title{
+    font-family:'Noto Serif KR', serif;
+    font-size:15.5px; font-weight:700; color:var(--ink);
+    line-height:1.5;
+  }
+
   footer{
     max-width:1040px; margin:70px auto 0;
     padding:20px 28px 60px;
@@ -561,6 +604,32 @@
 
     <h3 class="serif">한 편의 좋은 논문이 열 번의 검색보다 낫다</h3>
     <p>키워드를 여러 번 바꿔가며 검색하는 것보다, 주제와 잘 맞는 논문 한 편을 먼저 찾은 뒤 그 논문이 인용한 문헌과 그 논문을 인용한 후속 연구를 따라가는 방식이 훨씬 효율적인 경우가 많습니다. Google Scholar와 Semantic Scholar는 이 인용 관계를 시각적으로 보여주기 때문에, 검색어를 고민하는 대신 "괜찮은 논문 한 편"을 먼저 찾는 데 시간을 쓰는 것이 결과적으로 더 빠릅니다.</p>
+  </div>
+
+  <div class="article-links">
+    <div class="article-links-head">
+      <div class="drawer-tab mono"><span class="dot"></span>HOW-TO ARTICLES</div>
+      <h2 class="serif">상황별 실전 가이드</h2>
+      <p class="article-links-desc">사이트 소개가 아니라, 실제로 자주 부딪히는 문제 상황을 다룬 글입니다.</p>
+    </div>
+    <div class="article-grid">
+      <a class="article-card" href="articles/free-access-methods.html">
+        <div class="article-card-tag mono">PAYWALL</div>
+        <div class="article-card-title">논문 원문이 유료로 막혔을 때<br>무료로 보는 5가지 방법</div>
+      </a>
+      <a class="article-card" href="articles/literature-review-guide.html">
+        <div class="article-card-tag mono">LIT REVIEW</div>
+        <div class="article-card-title">졸업논문 참고문헌,<br>어디서부터 찾아야 할까</div>
+      </a>
+      <a class="article-card" href="articles/english-search-tips.html">
+        <div class="article-card-tag mono">ENG SEARCH</div>
+        <div class="article-card-title">영어 논문 검색이 막막할 때<br>쓰는 방법</div>
+      </a>
+      <a class="article-card" href="articles/citation-basics.html">
+        <div class="article-card-tag mono">CITATION</div>
+        <div class="article-card-title">APA, MLA 인용 형식<br>기본 정리</div>
+      </a>
+    </div>
   </div>
 
   <footer class="mono">

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>APA, MLA 인용 형식 기본 정리 | 논문 사이트 카탈로그</title>
+<meta name="description" content="논문·리포트 작성 시 자주 쓰이는 APA, MLA 인용 형식의 기본 규칙을 정리했습니다.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://paper-site-catalog.vercel.app/articles/citation-basics.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@500;600;700;900&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.css">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2557338953436433" crossorigin="anonymous"></script>
+<style>
+  :root{
+    --paper:#e9e3d3; --card:#f7f3e6; --ink:#221f1a; --ink-soft:#5c5646;
+    --stamp:#a4382b; --teal:#2c5a4d; --line:#c5bb9e; --gold:#a9822f;
+  }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  body{
+    background:var(--paper);
+    background-image:repeating-linear-gradient(0deg, rgba(0,0,0,0.015) 0px, rgba(0,0,0,0.015) 1px, transparent 1px, transparent 3px);
+    color:var(--ink); font-family:'Pretendard', sans-serif; line-height:1.8;
+    -webkit-font-smoothing:antialiased;
+  }
+  .mono{font-family:'IBM Plex Mono', monospace; letter-spacing:0.02em;}
+  .serif{font-family:'Noto Serif KR', serif;}
+  .sitenav{background:var(--ink); color:var(--paper);}
+  .sitenav-inner{max-width:1040px; margin:0 auto; padding:14px 28px; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:10px; font-size:12px;}
+  .sitenav-inner .brand{color:var(--paper); text-decoration:none; letter-spacing:0.06em; font-weight:600;}
+  .sitenav-links{display:flex; gap:18px;}
+  .sitenav-links a{color:#cfc7ac; text-decoration:none; transition:color .12s ease;}
+  .sitenav-links a:hover{color:var(--paper);}
+
+  .page{max-width:720px; margin:0 auto; padding:56px 28px 80px;}
+  .drawer-tab{display:inline-flex; align-items:center; gap:10px; background:var(--ink); color:var(--paper); padding:7px 16px 7px 14px; font-size:12.5px; letter-spacing:0.14em; border-radius:2px 2px 0 0;}
+  .drawer-tab .dot{width:6px;height:6px;border-radius:50%;background:var(--stamp);}
+  h1{
+    font-family:'Noto Serif KR', serif; font-size:clamp(26px,5vw,40px); font-weight:900;
+    margin-top:16px; border-top:3px solid var(--ink); border-bottom:1px solid var(--ink); padding:18px 0 20px;
+  }
+  .lede{font-size:14.5px; color:var(--ink-soft); margin:16px 0 30px;}
+  p{font-size:14.5px; color:var(--ink-soft); margin-bottom:14px;}
+  h2{font-family:'Noto Serif KR', serif; font-size:19px; font-weight:700; margin:32px 0 12px; color:var(--ink);}
+  ol, ul{margin:0 0 16px 20px;}
+  li{color:var(--ink-soft); font-size:14.5px; margin-bottom:10px;}
+  li b{color:var(--ink);}
+  .num-list{list-style:none; margin-left:0; counter-reset:num;}
+  .num-list li{
+    counter-increment:num;
+    position:relative; padding-left:42px; margin-bottom:20px;
+  }
+  .num-list li::before{
+    content:counter(num);
+    position:absolute; left:0; top:-2px;
+    font-family:'Noto Serif KR', serif; font-weight:800; font-size:20px;
+    color:var(--gold);
+  }
+  .num-list li b{display:block; font-size:15.5px; margin-bottom:4px; color:var(--ink);}
+  table{width:100%; border-collapse:collapse; margin:18px 0; font-size:13.5px;}
+  th{text-align:left; font-family:'IBM Plex Mono', monospace; font-size:11px; letter-spacing:0.05em; color:var(--ink-soft); padding:8px 10px; border-bottom:1px solid var(--line);}
+  td{padding:10px; border-bottom:1px solid var(--line); color:var(--ink-soft);}
+  td.k{font-weight:600; color:var(--ink); white-space:nowrap;}
+  .callout{background:var(--card); border:1px solid var(--line); border-left:3px solid var(--gold); padding:14px 18px; font-size:13.5px; color:var(--ink-soft); margin:22px 0;}
+  .callout b{color:var(--ink);}
+  .backlink{
+    display:inline-block; margin-top:36px; font-family:'IBM Plex Mono', monospace; font-size:12px;
+    color:var(--ink-soft); text-decoration:none; border-bottom:1px solid var(--line); padding-bottom:2px;
+  }
+  .backlink:hover{color:var(--stamp); border-color:var(--stamp);}
+  a.inline{color:var(--stamp); text-decoration:none; border-bottom:1px solid currentColor;}
+  footer{max-width:1040px; margin:20px auto 0; padding:20px 28px 60px; border-top:1px solid var(--line); font-family:'IBM Plex Mono', monospace; font-size:11.5px; color:var(--ink-soft); display:flex; justify-content:space-between; flex-wrap:wrap; gap:8px;}
+  footer a{color:inherit;}
+  @media (max-width:560px){ .page{padding:44px 18px 60px;} }
+</style>
+</head>
+<body>
+
+  <nav class="sitenav mono">
+    <div class="sitenav-inner">
+      <a href="../index.html" class="brand">논문 사이트 카탈로그</a>
+      <div class="sitenav-links">
+        <a href="../index.html">홈</a>
+        <a href="../about.html">사이트 소개</a>
+        <a href="../privacy.html">개인정보처리방침</a>
+      </div>
+    </div>
+  </nav>
+
+  <div class="page">
+    <div class="drawer-tab mono"><span class="dot"></span>HOW-TO · CITATION</div>
+    <h1>APA, MLA 인용 형식, 헷갈릴 때 보는 기본 정리</h1>
+    <p class="lede">전공마다 요구하는 형식이 다르니, 먼저 어떤 형식을 써야 하는지부터 확인하세요.</p>
+
+    <p>논문이나 리포트에 참고문헌을 표기할 때 형식을 잘못 쓰면 감점 요인이 되기도 합니다. 전공에 따라 요구하는 형식이 다르므로, 지도교수나 학과의 안내를 먼저 확인하는 것이 우선입니다.</p>
+
+    <h2>어떤 전공이 어떤 형식을 주로 쓸까</h2>
+    <table>
+      <thead><tr><th>형식</th><th>주로 쓰이는 분야</th></tr></thead>
+      <tbody>
+        <tr><td class="k">APA</td><td>심리학, 사회과학, 교육학, 경영학</td></tr>
+        <tr><td class="k">MLA</td><td>문학, 언어학, 인문학 일부</td></tr>
+        <tr><td class="k">시카고(Chicago)</td><td>역사학, 일부 인문학</td></tr>
+        <tr><td class="k">IEEE</td><td>공학, 컴퓨터공학</td></tr>
+        <tr><td class="k">Vancouver</td><td>의학, 생명과학</td></tr>
+      </tbody>
+    </table>
+
+    <h2>APA 형식 기본 (학술지 논문 기준)</h2>
+    <p>저자명(발행연도). 논문 제목. <i>학술지명</i>, 권(호), 페이지. 의 순서로 작성합니다. 저자가 여러 명이면 마지막 저자 앞에 &를 붙이는 것이 특징입니다.</p>
+
+    <h2>MLA 형식 기본</h2>
+    <p>저자명. "논문 제목." <i>학술지명</i>, 권.호, 발행연도, 페이지. 의 순서로 작성하며, 논문 제목을 큰따옴표로 묶는 것이 APA와 다른 점입니다.</p>
+
+    <h2>가장 흔한 실수</h2>
+    <ul>
+      <li>같은 리포트 안에서 <b>형식을 섞어 쓰는 것</b> — 처음부터 끝까지 하나의 형식으로 통일해야 합니다.</li>
+      <li>저자가 여러 명일 때 <b>표기 순서를 임의로 바꾸는 것</b> — 원문에 표기된 저자 순서를 그대로 따라야 합니다.</li>
+      <li>온라인 자료인데 <b>접속 날짜나 URL을 빠뜨리는 것</b> — 웹 자료는 형식마다 URL·접속일 표기 규칙이 다르므로 확인이 필요합니다.</li>
+    </ul>
+
+    <div class="callout"><b>참고 —</b> RISS, DBpia 같은 사이트는 논문 페이지에서 인용 형식(APA, MLA 등)을 자동으로 생성해주는 기능을 제공하는 경우가 많습니다. 직접 형식을 맞추기보다 이 기능을 활용하면 실수를 줄일 수 있습니다.</div>
+
+    <a class="backlink" href="../index.html">← 전체 카탈로그로 돌아가기</a>
+  </div>
+
+  <footer class="mono">
+    <span>PAPER SITE CATALOG · ARTICLE</span>
+    <span><a href="../index.html">홈으로</a> · <a href="../about.html">사이트 소개</a></span>
+  </footer>
+
+</body>
+</html>
