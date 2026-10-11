@@ -60,6 +60,18 @@
   footer{max-width:1040px; margin:20px auto 0; padding:20px 28px 60px; border-top:1px solid var(--line); font-family:'IBM Plex Mono', monospace; font-size:11.5px; color:var(--ink-soft); display:flex; justify-content:space-between; flex-wrap:wrap; gap:8px;}
   footer a{color:inherit;}
   @media (max-width:560px){ .page{padding:44px 18px 60px;} }
+
+  .extra{margin-top:8px;}
+  .extra h2{font-family:'Noto Serif KR', serif; font-size:19px; font-weight:700; margin:34px 0 12px; color:var(--ink);}
+  .extra p, .extra li{font-size:14.5px; color:var(--ink-soft); line-height:1.8;}
+  .extra ol, .extra ul{margin:0 0 16px 20px;}
+  .extra li{margin-bottom:10px;}
+  .extra li b{color:var(--ink);}
+  .extra table{width:100%; border-collapse:collapse; margin:14px 0 18px; font-size:13.5px;}
+  .extra th{text-align:left; font-family:'IBM Plex Mono', monospace; font-size:11px; letter-spacing:0.05em; color:var(--ink-soft); padding:8px 10px; border-bottom:1px solid var(--line);}
+  .extra td{padding:10px; border-bottom:1px solid var(--line); color:var(--ink-soft); vertical-align:top;}
+  .extra td a, .extra li a{color:var(--stamp); text-decoration:none; border-bottom:1px solid currentColor;}
+  @media (max-width:560px){ .extra table{font-size:12.5px;} }
 </style>
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2557338953436433" crossorigin="anonymous"></script>
 </head>
@@ -67,9 +79,9 @@
 
   <nav class="sitenav mono">
     <div class="sitenav-inner">
-      <a href="../index.html" class="brand">논문 사이트 카탈로그</a>
+      <a href="/" class="brand">논문 사이트 카탈로그</a>
       <div class="sitenav-links">
-        <a href="../index.html">홈</a>
+        <a href="/">홈</a>
         <a href="../about.html">사이트 소개</a>
         <a href="../privacy.html">개인정보처리방침</a>
       </div>
@@ -102,12 +114,46 @@
 
     <div class="callout"><b>참고 —</b> 심리학이나 사회과학 분야는 arXiv보다 PsyArXiv, SSRN 같은 해당 분야 전용 프리프린트 서버를 확인하는 것이 더 관련성 높은 결과를 줄 수 있습니다.</div>
 
-    <a class="backlink" href="../index.html">← 전체 카탈로그로 돌아가기</a>
+    
+    <section class="extra">
+      <h2>arXiv 이용 순서</h2>
+      <ol>
+      <li>관심 분야의 카테고리(예: cs.AI, cs.LG)를 고르거나, 검색창에 영어 키워드를 입력합니다.</li>
+      <li>논문 페이지에서 초록과 제출 이력(Submission history)을 확인해 <b>버전(v1, v2…)</b>이 몇 번까지 있는지 봅니다.</li>
+      <li>PDF를 읽고, 페이지에 <b>Journal reference</b>가 표시돼 있으면 정식 학술지 게재 여부까지 확인합니다.</li>
+      <li>인용 정보가 필요하면 BibTeX 내보내기 기능으로 서지정보를 복사합니다.</li>
+      </ol>
+
+      <h2>자주 막히는 상황과 해결</h2>
+      <ul>
+      <li><b>정식으로 게재된 논문인지 모를 때</b> — 논문 페이지의 Journal reference 항목을 확인하고, 없다면 Google Scholar에서 제목으로 검색해 게재 여부를 교차 확인하세요.</li>
+      <li><b>버전마다 수치나 결론이 다를 때</b> — 가능하면 최신 버전을 기준으로 읽고, 인용할 때는 몇 번째 버전인지 함께 적어두는 것이 안전합니다.</li>
+      <li><b>내 분야 논문이 거의 없을 때</b> — 심리학·사회과학은 PsyArXiv, SSRN처럼 해당 분야의 프리프린트 서버가 더 적합합니다.</li>
+      </ul>
+
+      <h2>비슷한 사이트와 비교</h2>
+      <table>
+        <thead><tr><th>사이트</th><th>arXiv와 다른 점</th><th>이럴 땐</th></tr></thead>
+        <tbody>
+        <tr><td><a href="google-scholar.html">Google Scholar</a></td><td>게재 여부와 인용 수를 함께 확인할 수 있습니다.</td><td>arXiv 논문의 후속 평가를 볼 때</td></tr>
+        <tr><td><a href="semantic-scholar.html">Semantic Scholar</a></td><td>AI 요약으로 논문 핵심을 빠르게 파악합니다.</td><td>여러 프리프린트를 훑을 때</td></tr>
+        <tr><td><a href="scienceon.html">ScienceON</a></td><td>국내 이공계 논문·특허·동향을 함께 봅니다.</td><td>국내 기술 동향이 필요할 때</td></tr>
+        </tbody>
+      </table>
+
+      <h2>함께 읽으면 좋은 글</h2>
+      <ul>
+      <li><a href="semantic-scholar.html">Semantic Scholar 가이드</a></li>
+      <li><a href="../articles/english-search-tips.html">영어 논문 검색이 막막할 때 쓰는 방법</a></li>
+      </ul>
+    </section>
+
+    <a class="backlink" href="/">← 전체 카탈로그로 돌아가기</a>
   </div>
 
   <footer class="mono">
     <span>PAPER SITE CATALOG · GUIDE</span>
-    <span><a href="../index.html">홈으로</a> · <a href="../about.html">사이트 소개</a></span>
+    <span><a href="/">홈으로</a> · <a href="../about.html">사이트 소개</a></span>
   </footer>
 
 </body>

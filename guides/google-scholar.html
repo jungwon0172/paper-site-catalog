@@ -60,6 +60,18 @@
   footer{max-width:1040px; margin:20px auto 0; padding:20px 28px 60px; border-top:1px solid var(--line); font-family:'IBM Plex Mono', monospace; font-size:11.5px; color:var(--ink-soft); display:flex; justify-content:space-between; flex-wrap:wrap; gap:8px;}
   footer a{color:inherit;}
   @media (max-width:560px){ .page{padding:44px 18px 60px;} }
+
+  .extra{margin-top:8px;}
+  .extra h2{font-family:'Noto Serif KR', serif; font-size:19px; font-weight:700; margin:34px 0 12px; color:var(--ink);}
+  .extra p, .extra li{font-size:14.5px; color:var(--ink-soft); line-height:1.8;}
+  .extra ol, .extra ul{margin:0 0 16px 20px;}
+  .extra li{margin-bottom:10px;}
+  .extra li b{color:var(--ink);}
+  .extra table{width:100%; border-collapse:collapse; margin:14px 0 18px; font-size:13.5px;}
+  .extra th{text-align:left; font-family:'IBM Plex Mono', monospace; font-size:11px; letter-spacing:0.05em; color:var(--ink-soft); padding:8px 10px; border-bottom:1px solid var(--line);}
+  .extra td{padding:10px; border-bottom:1px solid var(--line); color:var(--ink-soft); vertical-align:top;}
+  .extra td a, .extra li a{color:var(--stamp); text-decoration:none; border-bottom:1px solid currentColor;}
+  @media (max-width:560px){ .extra table{font-size:12.5px;} }
 </style>
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2557338953436433" crossorigin="anonymous"></script>
 </head>
@@ -67,9 +79,9 @@
 
   <nav class="sitenav mono">
     <div class="sitenav-inner">
-      <a href="../index.html" class="brand">논문 사이트 카탈로그</a>
+      <a href="/" class="brand">논문 사이트 카탈로그</a>
       <div class="sitenav-links">
-        <a href="../index.html">홈</a>
+        <a href="/">홈</a>
         <a href="../about.html">사이트 소개</a>
         <a href="../privacy.html">개인정보처리방침</a>
       </div>
@@ -102,12 +114,46 @@
 
     <div class="callout"><b>참고 —</b> 의생명 분야는 PubMed, 물리·수학·컴퓨터 분야는 arXiv가 더 정제된 검색 결과를 보여주는 경우가 많으므로 분야에 따라 함께 활용하는 것을 추천합니다.</div>
 
-    <a class="backlink" href="../index.html">← 전체 카탈로그로 돌아가기</a>
+    
+    <section class="extra">
+      <h2>Google Scholar 이용 순서</h2>
+      <ol>
+      <li>설정 메뉴의 <b>도서관 링크</b>에서 소속 대학을 검색해 추가합니다. 이렇게 해두면 검색 결과 옆에 학교 도서관을 통한 접속 링크가 표시되는 경우가 있습니다.</li>
+      <li>한글 키워드와 영어 키워드를 각각 검색합니다. 같은 주제라도 결과가 크게 다릅니다.</li>
+      <li>마음에 드는 논문에서 <b>인용</b> 버튼으로 인용 형식을 복사하고, <b>인용한 문서</b>로 후속 연구를 따라갑니다.</li>
+      <li>자주 보는 주제는 알림을 만들어 새 논문이 올라올 때 받아봅니다.</li>
+      </ol>
+
+      <h2>자주 막히는 상황과 해결</h2>
+      <ul>
+      <li><b>PDF 링크가 보이지 않을 때</b> — 논문 제목을 큰따옴표로 묶어 다시 검색하고, 결과 하단의 &#x27;모든 버전 보기&#x27;를 눌러 다른 버전에 무료 PDF가 있는지 확인하세요. 저자 홈페이지나 arXiv에 올라와 있는 경우도 있습니다.</li>
+      <li><b>관련 없는 자료가 섞여 나올 때</b> — 고급검색에서 제목 한정, 연도 범위, 저자 조건을 걸면 결과가 크게 줄어듭니다.</li>
+      <li><b>한국어 논문이 잘 안 잡힐 때</b> — 국내 학위논문과 일부 학술지는 RISS·DBpia에서 직접 검색하는 편이 더 정확합니다.</li>
+      </ul>
+
+      <h2>비슷한 사이트와 비교</h2>
+      <table>
+        <thead><tr><th>사이트</th><th>Google Scholar와 다른 점</th><th>이럴 땐</th></tr></thead>
+        <tbody>
+        <tr><td><a href="semantic-scholar.html">Semantic Scholar</a></td><td>인용의 질(영향력 있는 인용)을 따로 보여줍니다.</td><td>핵심 논문만 빠르게 추릴 때</td></tr>
+        <tr><td><a href="pubmed.html">PubMed</a></td><td>의생명 분야에 특화돼 필터가 정교합니다.</td><td>의학·보건 분야 검색</td></tr>
+        <tr><td><a href="riss.html">RISS</a></td><td>국내 학위논문과 학술지 원문이 강점입니다.</td><td>국내 자료가 필요할 때</td></tr>
+        </tbody>
+      </table>
+
+      <h2>함께 읽으면 좋은 글</h2>
+      <ul>
+      <li><a href="semantic-scholar.html">Semantic Scholar 가이드</a></li>
+      <li><a href="../articles/english-search-tips.html">영어 논문 검색이 막막할 때 쓰는 방법</a></li>
+      </ul>
+    </section>
+
+    <a class="backlink" href="/">← 전체 카탈로그로 돌아가기</a>
   </div>
 
   <footer class="mono">
     <span>PAPER SITE CATALOG · GUIDE</span>
-    <span><a href="../index.html">홈으로</a> · <a href="../about.html">사이트 소개</a></span>
+    <span><a href="/">홈으로</a> · <a href="../about.html">사이트 소개</a></span>
   </footer>
 
 </body>

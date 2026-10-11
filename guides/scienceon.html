@@ -60,6 +60,18 @@
   footer{max-width:1040px; margin:20px auto 0; padding:20px 28px 60px; border-top:1px solid var(--line); font-family:'IBM Plex Mono', monospace; font-size:11.5px; color:var(--ink-soft); display:flex; justify-content:space-between; flex-wrap:wrap; gap:8px;}
   footer a{color:inherit;}
   @media (max-width:560px){ .page{padding:44px 18px 60px;} }
+
+  .extra{margin-top:8px;}
+  .extra h2{font-family:'Noto Serif KR', serif; font-size:19px; font-weight:700; margin:34px 0 12px; color:var(--ink);}
+  .extra p, .extra li{font-size:14.5px; color:var(--ink-soft); line-height:1.8;}
+  .extra ol, .extra ul{margin:0 0 16px 20px;}
+  .extra li{margin-bottom:10px;}
+  .extra li b{color:var(--ink);}
+  .extra table{width:100%; border-collapse:collapse; margin:14px 0 18px; font-size:13.5px;}
+  .extra th{text-align:left; font-family:'IBM Plex Mono', monospace; font-size:11px; letter-spacing:0.05em; color:var(--ink-soft); padding:8px 10px; border-bottom:1px solid var(--line);}
+  .extra td{padding:10px; border-bottom:1px solid var(--line); color:var(--ink-soft); vertical-align:top;}
+  .extra td a, .extra li a{color:var(--stamp); text-decoration:none; border-bottom:1px solid currentColor;}
+  @media (max-width:560px){ .extra table{font-size:12.5px;} }
 </style>
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2557338953436433" crossorigin="anonymous"></script>
 </head>
@@ -67,9 +79,9 @@
 
   <nav class="sitenav mono">
     <div class="sitenav-inner">
-      <a href="../index.html" class="brand">논문 사이트 카탈로그</a>
+      <a href="/" class="brand">논문 사이트 카탈로그</a>
       <div class="sitenav-links">
-        <a href="../index.html">홈</a>
+        <a href="/">홈</a>
         <a href="../about.html">사이트 소개</a>
         <a href="../privacy.html">개인정보처리방침</a>
       </div>
@@ -98,12 +110,46 @@
 
     <div class="callout"><b>참고 —</b> 논문 원문 접근성은 RISS와 비슷하게 무료로 제공되는 경우가 많지만, 일부 자료는 소속 기관 인증이 필요할 수 있습니다.</div>
 
-    <a class="backlink" href="../index.html">← 전체 카탈로그로 돌아가기</a>
+    
+    <section class="extra">
+      <h2>ScienceON 이용 순서</h2>
+      <ol>
+      <li>통합검색에 키워드를 넣고, 결과를 <b>논문·특허·보고서·동향</b> 탭으로 나눠서 확인합니다.</li>
+      <li>논문 상세 페이지에서 원문 제공 방식을 확인하고, 로그인이 필요하다고 나오면 로그인 후 다시 시도합니다.</li>
+      <li>같은 키워드로 특허 결과도 확인해, 연구된 기술이 실제로 어느 단계까지 상용화됐는지 가늠합니다.</li>
+      <li>큰 흐름이 필요하면 동향 자료를 먼저 훑고 개별 논문으로 내려가는 순서가 효율적입니다.</li>
+      </ol>
+
+      <h2>자주 막히는 상황과 해결</h2>
+      <ul>
+      <li><b>원문이 열리지 않을 때</b> — 로그인 상태와 제공 기관 링크를 먼저 확인하세요. 그래도 안 되면 논문 제목을 RISS나 Google Scholar에서 다시 검색해 보세요.</li>
+      <li><b>인문·사회 자료가 거의 안 나올 때</b> — 이공계 중심 플랫폼이라 정상입니다. 해당 분야는 RISS나 DBpia가 더 적합합니다.</li>
+      <li><b>특허 용어가 낯설 때</b> — 관련 논문 초록에 쓰인 기술 용어를 그대로 특허 검색어로 재사용하면 결과 품질이 좋아집니다.</li>
+      </ul>
+
+      <h2>비슷한 사이트와 비교</h2>
+      <table>
+        <thead><tr><th>사이트</th><th>ScienceON와 다른 점</th><th>이럴 땐</th></tr></thead>
+        <tbody>
+        <tr><td><a href="riss.html">RISS</a></td><td>인문·사회까지 포함한 전분야 학위논문이 강점입니다.</td><td>이공계 외 분야가 필요할 때</td></tr>
+        <tr><td><a href="google-scholar.html">Google Scholar</a></td><td>해외 논문과 인용 정보까지 폭넓게 보여줍니다.</td><td>해외 연구를 볼 때</td></tr>
+        <tr><td><a href="arxiv.html">arXiv</a></td><td>정식 게재 전 최신 프리프린트를 볼 수 있습니다.</td><td>AI·물리·수학의 최신 동향</td></tr>
+        </tbody>
+      </table>
+
+      <h2>함께 읽으면 좋은 글</h2>
+      <ul>
+      <li><a href="arxiv.html">arXiv 가이드</a></li>
+      <li><a href="../articles/literature-review-guide.html">졸업논문 참고문헌, 어디서부터 찾아야 할까</a></li>
+      </ul>
+    </section>
+
+    <a class="backlink" href="/">← 전체 카탈로그로 돌아가기</a>
   </div>
 
   <footer class="mono">
     <span>PAPER SITE CATALOG · GUIDE</span>
-    <span><a href="../index.html">홈으로</a> · <a href="../about.html">사이트 소개</a></span>
+    <span><a href="/">홈으로</a> · <a href="../about.html">사이트 소개</a></span>
   </footer>
 
 </body>

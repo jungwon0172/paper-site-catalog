@@ -60,6 +60,18 @@
   footer{max-width:1040px; margin:20px auto 0; padding:20px 28px 60px; border-top:1px solid var(--line); font-family:'IBM Plex Mono', monospace; font-size:11.5px; color:var(--ink-soft); display:flex; justify-content:space-between; flex-wrap:wrap; gap:8px;}
   footer a{color:inherit;}
   @media (max-width:560px){ .page{padding:44px 18px 60px;} }
+
+  .extra{margin-top:8px;}
+  .extra h2{font-family:'Noto Serif KR', serif; font-size:19px; font-weight:700; margin:34px 0 12px; color:var(--ink);}
+  .extra p, .extra li{font-size:14.5px; color:var(--ink-soft); line-height:1.8;}
+  .extra ol, .extra ul{margin:0 0 16px 20px;}
+  .extra li{margin-bottom:10px;}
+  .extra li b{color:var(--ink);}
+  .extra table{width:100%; border-collapse:collapse; margin:14px 0 18px; font-size:13.5px;}
+  .extra th{text-align:left; font-family:'IBM Plex Mono', monospace; font-size:11px; letter-spacing:0.05em; color:var(--ink-soft); padding:8px 10px; border-bottom:1px solid var(--line);}
+  .extra td{padding:10px; border-bottom:1px solid var(--line); color:var(--ink-soft); vertical-align:top;}
+  .extra td a, .extra li a{color:var(--stamp); text-decoration:none; border-bottom:1px solid currentColor;}
+  @media (max-width:560px){ .extra table{font-size:12.5px;} }
 </style>
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2557338953436433" crossorigin="anonymous"></script>
 </head>
@@ -67,9 +79,9 @@
 
   <nav class="sitenav mono">
     <div class="sitenav-inner">
-      <a href="../index.html" class="brand">논문 사이트 카탈로그</a>
+      <a href="/" class="brand">논문 사이트 카탈로그</a>
       <div class="sitenav-links">
-        <a href="../index.html">홈</a>
+        <a href="/">홈</a>
         <a href="../about.html">사이트 소개</a>
         <a href="../privacy.html">개인정보처리방침</a>
       </div>
@@ -98,12 +110,46 @@
 
     <div class="callout"><b>참고 —</b> 같은 키워드로 DBpia와 KISS를 모두 검색해 결과를 비교하면, 놓치는 논문 없이 더 폭넓은 국내 자료를 확보할 수 있습니다.</div>
 
-    <a class="backlink" href="../index.html">← 전체 카탈로그로 돌아가기</a>
+    
+    <section class="extra">
+      <h2>KISS 이용 순서</h2>
+      <ol>
+      <li>학교 도서관의 전자자료 목록에서 KISS로 접속합니다. 도서관 경유 접속이 기관 구독 혜택을 받는 가장 확실한 방법입니다.</li>
+      <li>논문 제목을 모를 때는 <b>학회명이나 학술지명</b>으로 검색해 해당 학술지가 수록돼 있는지부터 확인합니다.</li>
+      <li>DBpia에서 쓴 것과 같은 키워드로 한 번 더 검색해 결과를 비교합니다.</li>
+      <li>두 사이트에서 찾은 논문의 서지정보(저자·연도·학술지·권호·쪽수)를 한 파일에 합쳐 정리합니다.</li>
+      </ol>
+
+      <h2>자주 막히는 상황과 해결</h2>
+      <ul>
+      <li><b>DBpia에서 찾던 논문이 안 나올 때</b> — 두 사이트는 수록 학술지가 완전히 겹치지 않습니다. 같은 키워드로 KISS에서 다시 검색해 보세요.</li>
+      <li><b>학교가 KISS를 구독하지 않을 때</b> — 도서관에 구독 여부를 문의하거나, RISS에서 소장처를 확인해 원문복사·상호대차를 신청하는 방법이 있습니다.</li>
+      <li><b>서지정보 정리가 번거로울 때</b> — 논문을 찾을 때마다 바로 메모하는 습관이 가장 빠릅니다. 나중에 한꺼번에 정리하려면 같은 논문을 다시 찾아야 합니다.</li>
+      </ul>
+
+      <h2>비슷한 사이트와 비교</h2>
+      <table>
+        <thead><tr><th>사이트</th><th>KISS와 다른 점</th><th>이럴 땐</th></tr></thead>
+        <tbody>
+        <tr><td><a href="dbpia.html">DBpia</a></td><td>이용자가 가장 많은 국내 학술 플랫폼입니다.</td><td>먼저 검색할 곳으로</td></tr>
+        <tr><td><a href="riss.html">RISS</a></td><td>학위논문 중심으로 무료 열람 범위가 넓습니다.</td><td>무료 원문이 필요할 때</td></tr>
+        <tr><td><a href="naver-academic.html">네이버 학술정보</a></td><td>여러 DB 결과를 한 화면에서 훑어볼 수 있습니다.</td><td>어느 DB에 있는지 모를 때</td></tr>
+        </tbody>
+      </table>
+
+      <h2>함께 읽으면 좋은 글</h2>
+      <ul>
+      <li><a href="dbpia.html">DBpia 가이드</a></li>
+      <li><a href="../articles/free-access-methods.html">논문 원문이 유료로 막혔을 때 무료로 보는 5가지 방법</a></li>
+      </ul>
+    </section>
+
+    <a class="backlink" href="/">← 전체 카탈로그로 돌아가기</a>
   </div>
 
   <footer class="mono">
     <span>PAPER SITE CATALOG · GUIDE</span>
-    <span><a href="../index.html">홈으로</a> · <a href="../about.html">사이트 소개</a></span>
+    <span><a href="/">홈으로</a> · <a href="../about.html">사이트 소개</a></span>
   </footer>
 
 </body>

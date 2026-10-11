@@ -60,6 +60,18 @@
   footer{max-width:1040px; margin:20px auto 0; padding:20px 28px 60px; border-top:1px solid var(--line); font-family:'IBM Plex Mono', monospace; font-size:11.5px; color:var(--ink-soft); display:flex; justify-content:space-between; flex-wrap:wrap; gap:8px;}
   footer a{color:inherit;}
   @media (max-width:560px){ .page{padding:44px 18px 60px;} }
+
+  .extra{margin-top:8px;}
+  .extra h2{font-family:'Noto Serif KR', serif; font-size:19px; font-weight:700; margin:34px 0 12px; color:var(--ink);}
+  .extra p, .extra li{font-size:14.5px; color:var(--ink-soft); line-height:1.8;}
+  .extra ol, .extra ul{margin:0 0 16px 20px;}
+  .extra li{margin-bottom:10px;}
+  .extra li b{color:var(--ink);}
+  .extra table{width:100%; border-collapse:collapse; margin:14px 0 18px; font-size:13.5px;}
+  .extra th{text-align:left; font-family:'IBM Plex Mono', monospace; font-size:11px; letter-spacing:0.05em; color:var(--ink-soft); padding:8px 10px; border-bottom:1px solid var(--line);}
+  .extra td{padding:10px; border-bottom:1px solid var(--line); color:var(--ink-soft); vertical-align:top;}
+  .extra td a, .extra li a{color:var(--stamp); text-decoration:none; border-bottom:1px solid currentColor;}
+  @media (max-width:560px){ .extra table{font-size:12.5px;} }
 </style>
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2557338953436433" crossorigin="anonymous"></script>
 </head>
@@ -67,9 +79,9 @@
 
   <nav class="sitenav mono">
     <div class="sitenav-inner">
-      <a href="../index.html" class="brand">논문 사이트 카탈로그</a>
+      <a href="/" class="brand">논문 사이트 카탈로그</a>
       <div class="sitenav-links">
-        <a href="../index.html">홈</a>
+        <a href="/">홈</a>
         <a href="../about.html">사이트 소개</a>
         <a href="../privacy.html">개인정보처리방침</a>
       </div>
@@ -103,12 +115,46 @@
 
     <div class="callout"><b>참고 —</b> RISS는 국내 자료 중심이므로 해외 연구 동향이 필요하다면 Google Scholar나 arXiv 같은 해외 사이트를 함께 활용하는 것이 좋습니다.</div>
 
-    <a class="backlink" href="../index.html">← 전체 카탈로그로 돌아가기</a>
+    
+    <section class="extra">
+      <h2>RISS 이용 순서</h2>
+      <ol>
+      <li>한글 키워드로 검색한 뒤, 결과를 <b>학위논문</b>과 <b>국내학술지논문</b>으로 나눠서 봅니다. 두 종류는 읽는 목적이 다릅니다.</li>
+      <li>상세 페이지에서 원문 열람 방식을 확인합니다. 바로 열리는지, 소속기관 인증이 필요한지, 외부 제공기관으로 넘어가는지에 따라 다음 행동이 달라집니다.</li>
+      <li>원문이 없으면 소장처를 확인하고, 학교 도서관을 통한 원문복사·상호대차 신청이 가능한지 살펴봅니다.</li>
+      <li>쓸 만한 논문은 찾는 즉시 제목·저자·연도를 따로 메모합니다. 나중에 참고문헌을 쓸 때 같은 논문을 다시 찾는 시간이 크게 줄어듭니다.</li>
+      </ol>
+
+      <h2>자주 막히는 상황과 해결</h2>
+      <ul>
+      <li><b>학위논문 원문이 &#x27;열람 제한&#x27;으로 뜰 때</b> — 저자가 공개에 동의하지 않았거나 소속 대학 구성원에게만 공개한 경우가 많습니다. 학교 로그인으로 열리는지 확인하고, 안 되면 같은 저자의 학술지 게재본이 DBpia·KISS에 있는지 제목으로 검색해 보세요.</li>
+      <li><b>검색 결과가 너무 많을 때</b> — 연도 범위를 최근 5년으로 줄이고, 키워드를 제목에 포함된 것으로 한정하면 정리하기 쉬운 수준으로 줄어듭니다.</li>
+      <li><b>외부 사이트로 넘어갔는데 결제창이 뜰 때</b> — 바로 결제하지 말고, 학교 도서관 경유로 같은 사이트에 다시 접속해 보세요. 기관 구독이 있으면 무료로 열리는 경우가 많습니다.</li>
+      </ul>
+
+      <h2>비슷한 사이트와 비교</h2>
+      <table>
+        <thead><tr><th>사이트</th><th>RISS와 다른 점</th><th>이럴 땐</th></tr></thead>
+        <tbody>
+        <tr><td><a href="dbpia.html">DBpia</a></td><td>상용 학술지 플랫폼으로 최신 학술지 논문 비중이 큽니다.</td><td>최신 학술지 논문이 필요할 때</td></tr>
+        <tr><td><a href="assembly-library.html">국회전자도서관</a></td><td>정책 문헌과 오래된 자료까지 폭넓게 보유합니다.</td><td>RISS에서 안 나오는 자료를 보완할 때</td></tr>
+        <tr><td><a href="naver-academic.html">네이버 학술정보</a></td><td>여러 DB의 서지정보를 한 번에 보여주는 검색 관문입니다.</td><td>어디에 있는지 모를 때 출발점으로</td></tr>
+        </tbody>
+      </table>
+
+      <h2>함께 읽으면 좋은 글</h2>
+      <ul>
+      <li><a href="dbpia.html">DBpia 가이드</a></li>
+      <li><a href="../articles/literature-review-guide.html">졸업논문 참고문헌, 어디서부터 찾아야 할까</a></li>
+      </ul>
+    </section>
+
+    <a class="backlink" href="/">← 전체 카탈로그로 돌아가기</a>
   </div>
 
   <footer class="mono">
     <span>PAPER SITE CATALOG · GUIDE</span>
-    <span><a href="../index.html">홈으로</a> · <a href="../about.html">사이트 소개</a></span>
+    <span><a href="/">홈으로</a> · <a href="../about.html">사이트 소개</a></span>
   </footer>
 
 </body>
