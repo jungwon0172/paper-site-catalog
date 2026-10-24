@@ -72,8 +72,62 @@
   .extra td{padding:10px; border-bottom:1px solid var(--line); color:var(--ink-soft); vertical-align:top;}
   .extra td a, .extra li a{color:var(--stamp); text-decoration:none; border-bottom:1px solid currentColor;}
   @media (max-width:560px){ .extra table{font-size:12.5px;} }
+
+  .crumbs{font-family:'IBM Plex Mono', monospace; font-size:11.5px; color:var(--ink-soft); margin-bottom:16px;}
+  .crumbs a{color:var(--ink-soft); text-decoration:none; border-bottom:1px solid var(--line);}
+  .crumbs a:hover{color:var(--stamp); border-color:var(--stamp);}
+  .answer-box{background:var(--card); border:1px solid var(--line); border-left:3px solid var(--teal); padding:16px 18px; margin:22px 0 18px;}
+  .answer-q{font-family:'Noto Serif KR', serif; font-weight:700; font-size:15.5px; color:var(--ink); margin-bottom:8px;}
+  .answer-a{font-size:14.5px; color:var(--ink); line-height:1.8; margin:0;}
+  .answer-meta{margin-top:12px; padding-top:10px; border-top:1px dashed var(--line); font-family:'IBM Plex Mono', monospace; font-size:11px; color:var(--ink-soft); line-height:1.7;}
+  .answer-meta a{color:inherit;}
+  .answer-wrap{max-width:1040px; margin:0 auto 28px; padding:0 28px;}
+  @media (max-width:560px){ .answer-wrap{padding:0 18px;} }
 </style>
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2557338953436433" crossorigin="anonymous"></script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "headline": "PubMed 검색 활용 가이드",
+      "description": "의학·생명과학 분야 논문을 PubMed에서 효율적으로 검색하는 방법을 정리했습니다.",
+      "inLanguage": "ko",
+      "datePublished": "2026-07-23",
+      "dateModified": "2026-10-24",
+      "mainEntityOfPage": "https://paper-site-catalog.vercel.app/guides/pubmed.html",
+      "author": {
+        "@type": "Organization",
+        "name": "논문 사이트 카탈로그",
+        "url": "https://paper-site-catalog.vercel.app/"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "논문 사이트 카탈로그",
+        "url": "https://paper-site-catalog.vercel.app/"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "홈",
+          "item": "https://paper-site-catalog.vercel.app/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "PubMed 가이드",
+          "item": "https://paper-site-catalog.vercel.app/guides/pubmed.html"
+        }
+      ]
+    }
+  ]
+}
+</script>
 </head>
 <body>
 
@@ -89,9 +143,15 @@
   </nav>
 
   <div class="page">
+    <nav class="crumbs" aria-label="breadcrumb"><a href="/">홈</a> › PubMed 가이드</nav>
     <div class="drawer-tab mono"><span class="dot"></span>GUIDE · GL·FREE-02</div>
     <div class="tags"><span class="tag region">해외</span><span class="tag free">무료</span><span class="tag region">의학·생명과학</span></div>
     <h1>PubMed 검색 활용 가이드</h1>
+    <div class="answer-box">
+      <div class="answer-q">Q. PubMed 논문 원문은 무료로 볼 수 있나요?</div>
+      <p class="answer-a">PubMed 자체는 초록까지 무료이고, 원문은 논문마다 다릅니다. &#x27;Free full text&#x27; 필터를 쓰면 원문이 무료로 공개된 논문만 추릴 수 있고, PMC에 등록된 논문은 원문 열람이 가능한 경우가 많습니다.</p>
+      <div class="answer-meta">최종 수정 <time datetime="2026-10-24">2026-10-24</time> · 논문 사이트 카탈로그 운영 · 정보가 다르면 <a href="mailto:yjw2172@naver.com">yjw2172@naver.com</a>로 알려주세요.</div>
+    </div>
 
     <p>PubMed는 미국 국립의학도서관(NLM) 산하 NCBI가 운영하는 의학·생명과학 분야 논문 검색 서비스입니다. 전 세계 의학 저널의 논문 초록을 방대하게 무료로 제공하며, 의생명 분야에서는 사실상 표준처럼 쓰이는 데이터베이스입니다.</p>
 

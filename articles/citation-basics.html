@@ -73,7 +73,61 @@
   footer{max-width:1040px; margin:20px auto 0; padding:20px 28px 60px; border-top:1px solid var(--line); font-family:'IBM Plex Mono', monospace; font-size:11.5px; color:var(--ink-soft); display:flex; justify-content:space-between; flex-wrap:wrap; gap:8px;}
   footer a{color:inherit;}
   @media (max-width:560px){ .page{padding:44px 18px 60px;} }
+
+  .crumbs{font-family:'IBM Plex Mono', monospace; font-size:11.5px; color:var(--ink-soft); margin-bottom:16px;}
+  .crumbs a{color:var(--ink-soft); text-decoration:none; border-bottom:1px solid var(--line);}
+  .crumbs a:hover{color:var(--stamp); border-color:var(--stamp);}
+  .answer-box{background:var(--card); border:1px solid var(--line); border-left:3px solid var(--teal); padding:16px 18px; margin:22px 0 18px;}
+  .answer-q{font-family:'Noto Serif KR', serif; font-weight:700; font-size:15.5px; color:var(--ink); margin-bottom:8px;}
+  .answer-a{font-size:14.5px; color:var(--ink); line-height:1.8; margin:0;}
+  .answer-meta{margin-top:12px; padding-top:10px; border-top:1px dashed var(--line); font-family:'IBM Plex Mono', monospace; font-size:11px; color:var(--ink-soft); line-height:1.7;}
+  .answer-meta a{color:inherit;}
+  .answer-wrap{max-width:1040px; margin:0 auto 28px; padding:0 28px;}
+  @media (max-width:560px){ .answer-wrap{padding:0 18px;} }
 </style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "headline": "APA, MLA 인용 형식, 헷갈릴 때 보는 기본 정리",
+      "description": "논문·리포트 작성 시 자주 쓰이는 APA, MLA 인용 형식의 기본 규칙을 정리했습니다.",
+      "inLanguage": "ko",
+      "datePublished": "2026-09-01",
+      "dateModified": "2026-10-24",
+      "mainEntityOfPage": "https://paper-site-catalog.vercel.app/articles/citation-basics.html",
+      "author": {
+        "@type": "Organization",
+        "name": "논문 사이트 카탈로그",
+        "url": "https://paper-site-catalog.vercel.app/"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "논문 사이트 카탈로그",
+        "url": "https://paper-site-catalog.vercel.app/"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "홈",
+          "item": "https://paper-site-catalog.vercel.app/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "인용 형식 기본",
+          "item": "https://paper-site-catalog.vercel.app/articles/citation-basics.html"
+        }
+      ]
+    }
+  ]
+}
+</script>
 </head>
 <body>
 
@@ -89,8 +143,14 @@
   </nav>
 
   <div class="page">
+    <nav class="crumbs" aria-label="breadcrumb"><a href="/">홈</a> › 인용 형식 기본</nav>
     <div class="drawer-tab mono"><span class="dot"></span>HOW-TO · CITATION</div>
     <h1>APA, MLA 인용 형식, 헷갈릴 때 보는 기본 정리</h1>
+    <div class="answer-box">
+      <div class="answer-q">Q. APA와 MLA 중 무엇을 써야 하나요?</div>
+      <p class="answer-a">전공과 지도교수·학과의 안내에 따라 정해집니다. 심리학·사회과학·교육학·경영학은 주로 APA, 문학과 일부 인문학은 MLA를 쓰며, 한 문서 안에서는 하나의 형식으로 통일해야 합니다.</p>
+      <div class="answer-meta">최종 수정 <time datetime="2026-10-24">2026-10-24</time> · 논문 사이트 카탈로그 운영 · 정보가 다르면 <a href="mailto:yjw2172@naver.com">yjw2172@naver.com</a>로 알려주세요.</div>
+    </div>
     <p class="lede">전공마다 요구하는 형식이 다르니, 먼저 어떤 형식을 써야 하는지부터 확인하세요.</p>
 
     <p>논문이나 리포트에 참고문헌을 표기할 때 형식을 잘못 쓰면 감점 요인이 되기도 합니다. 전공에 따라 요구하는 형식이 다르므로, 지도교수나 학과의 안내를 먼저 확인하는 것이 우선입니다.</p>

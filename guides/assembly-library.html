@@ -79,7 +79,98 @@
   .extra td{padding:10px; border-bottom:1px solid var(--line); color:var(--ink-soft); vertical-align:top;}
   .extra td a, .extra li a{color:var(--stamp); text-decoration:none; border-bottom:1px solid currentColor;}
   @media (max-width:560px){ .extra table{font-size:12.5px;} }
+
+  .crumbs{font-family:'IBM Plex Mono', monospace; font-size:11.5px; color:var(--ink-soft); margin-bottom:16px;}
+  .crumbs a{color:var(--ink-soft); text-decoration:none; border-bottom:1px solid var(--line);}
+  .crumbs a:hover{color:var(--stamp); border-color:var(--stamp);}
+  .answer-box{background:var(--card); border:1px solid var(--line); border-left:3px solid var(--teal); padding:16px 18px; margin:22px 0 18px;}
+  .answer-q{font-family:'Noto Serif KR', serif; font-weight:700; font-size:15.5px; color:var(--ink); margin-bottom:8px;}
+  .answer-a{font-size:14.5px; color:var(--ink); line-height:1.8; margin:0;}
+  .answer-meta{margin-top:12px; padding-top:10px; border-top:1px dashed var(--line); font-family:'IBM Plex Mono', monospace; font-size:11px; color:var(--ink-soft); line-height:1.7;}
+  .answer-meta a{color:inherit;}
+  .answer-wrap{max-width:1040px; margin:0 auto 28px; padding:0 28px;}
+  @media (max-width:560px){ .answer-wrap{padding:0 18px;} }
 </style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "headline": "국회전자도서관, 언제 써야 할까",
+      "description": "국회전자도서관에서 정책 자료와 오래된 학위논문을 찾는 방법을 Q&A로 정리했습니다.",
+      "inLanguage": "ko",
+      "datePublished": "2026-08-21",
+      "dateModified": "2026-10-24",
+      "mainEntityOfPage": "https://paper-site-catalog.vercel.app/guides/assembly-library.html",
+      "author": {
+        "@type": "Organization",
+        "name": "논문 사이트 카탈로그",
+        "url": "https://paper-site-catalog.vercel.app/"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "논문 사이트 카탈로그",
+        "url": "https://paper-site-catalog.vercel.app/"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "홈",
+          "item": "https://paper-site-catalog.vercel.app/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "국회전자도서관 가이드",
+          "item": "https://paper-site-catalog.vercel.app/guides/assembly-library.html"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "국회전자도서관은 정확히 어떤 사이트인가요?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "국회도서관이 운영하는 학술 데이터베이스로, 국내 학술지 논문과 학위논문뿐 아니라 국회 세미나 자료, 정책 보고서까지 폭넓게 무료로 제공합니다."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "RISS랑 뭐가 다른가요?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "수록 범위가 조금 다릅니다. RISS가 대학 중심의 학위논문·학술지에 강하다면, 국회전자도서관은 정책 문헌이나 오래된 자료를 상대적으로 더 폭넓게 보유하고 있습니다. 두 사이트를 함께 검색하면 누락되는 자료를 줄일 수 있습니다."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "어떤 상황에 써야 하나요?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "정책 관련 리포트를 쓰거나, RISS·DBpia에서 검색이 안 되는 오래된 학위논문·자료를 찾을 때 시도해볼 만합니다. 처음부터 메인 검색처로 쓰기보다는 보완용 사이트로 생각하는 것이 효율적입니다."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "검색 UI가 불편하다는 이야기가 있던데, 사실인가요?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "다른 사이트에 비해 상대적으로 오래된 인터페이스라 처음 쓰면 낯설 수 있습니다. 검색어를 너무 넓게 입력하면 결과가 잘 정리되지 않으니, 구체적인 키워드로 검색하고 필터를 활용하는 것을 추천합니다."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
 </head>
 <body>
 
@@ -95,9 +186,15 @@
   </nav>
 
   <div class="page">
+    <nav class="crumbs" aria-label="breadcrumb"><a href="/">홈</a> › 국회전자도서관 가이드</nav>
     <div class="drawer-tab mono"><span class="dot"></span>Q&A · KR·FREE-03</div>
     <div class="tags"><span class="tag region">국내</span><span class="tag free">무료</span><span class="tag region">전분야</span></div>
     <h1>국회전자도서관, 언제 써야 할까</h1>
+    <div class="answer-box">
+      <div class="answer-q">Q. 국회전자도서관은 언제 찾아보면 되나요?</div>
+      <p class="answer-a">RISS나 DBpia에서 찾지 못한 오래된 학위논문이나 정책 자료가 필요할 때 보완용으로 쓰기 좋습니다. 기본 검색처라기보다 보조 사이트로 생각하는 것이 효율적이고, 원문 열람 방식은 자료마다 다를 수 있습니다.</p>
+      <div class="answer-meta">최종 수정 <time datetime="2026-10-24">2026-10-24</time> · 논문 사이트 카탈로그 운영 · 정보가 다르면 <a href="mailto:yjw2172@naver.com">yjw2172@naver.com</a>로 알려주세요.</div>
+    </div>
     <p class="lede">RISS나 DBpia에서 못 찾은 자료가 있을 때 보완적으로 찾아볼 만한 곳입니다.</p>
     <div class="qa">
 

@@ -79,7 +79,98 @@
   .extra td{padding:10px; border-bottom:1px solid var(--line); color:var(--ink-soft); vertical-align:top;}
   .extra td a, .extra li a{color:var(--stamp); text-decoration:none; border-bottom:1px solid currentColor;}
   @media (max-width:560px){ .extra table{font-size:12.5px;} }
+
+  .crumbs{font-family:'IBM Plex Mono', monospace; font-size:11.5px; color:var(--ink-soft); margin-bottom:16px;}
+  .crumbs a{color:var(--ink-soft); text-decoration:none; border-bottom:1px solid var(--line);}
+  .crumbs a:hover{color:var(--stamp); border-color:var(--stamp);}
+  .answer-box{background:var(--card); border:1px solid var(--line); border-left:3px solid var(--teal); padding:16px 18px; margin:22px 0 18px;}
+  .answer-q{font-family:'Noto Serif KR', serif; font-weight:700; font-size:15.5px; color:var(--ink); margin-bottom:8px;}
+  .answer-a{font-size:14.5px; color:var(--ink); line-height:1.8; margin:0;}
+  .answer-meta{margin-top:12px; padding-top:10px; border-top:1px dashed var(--line); font-family:'IBM Plex Mono', monospace; font-size:11px; color:var(--ink-soft); line-height:1.7;}
+  .answer-meta a{color:inherit;}
+  .answer-wrap{max-width:1040px; margin:0 auto 28px; padding:0 28px;}
+  @media (max-width:560px){ .answer-wrap{padding:0 18px;} }
 </style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "headline": "PsycINFO, 심리학 전공이라면 알아둘 것",
+      "description": "심리학·행동과학 전문 데이터베이스 PsycINFO 활용법을 Q&A로 정리했습니다.",
+      "inLanguage": "ko",
+      "datePublished": "2026-08-21",
+      "dateModified": "2026-10-24",
+      "mainEntityOfPage": "https://paper-site-catalog.vercel.app/guides/psycinfo.html",
+      "author": {
+        "@type": "Organization",
+        "name": "논문 사이트 카탈로그",
+        "url": "https://paper-site-catalog.vercel.app/"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "논문 사이트 카탈로그",
+        "url": "https://paper-site-catalog.vercel.app/"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "홈",
+          "item": "https://paper-site-catalog.vercel.app/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "PsycINFO 가이드",
+          "item": "https://paper-site-catalog.vercel.app/guides/psycinfo.html"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "PubMed로는 부족한가요?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "PubMed도 정신건강·임상심리 관련 논문을 다루지만, PsycINFO는 미국심리학회(APA)가 직접 운영하는 심리학 전문 DB라 심리학·행동과학 논문의 분류와 주제어 체계가 훨씬 세밀합니다. 심리학을 전공한다면 PubMed와 함께 병행할 가치가 있습니다."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "주제어(Subject Heading) 검색이 왜 중요한가요?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "같은 심리학 개념이라도 논문마다 다른 용어로 표현되는 경우가 많은데, 주제어 검색을 활용하면 표현이 달라도 같은 개념을 다룬 논문을 놓치지 않고 찾을 수 있습니다."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "기관 구독 없이도 쓸 수 있나요?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "쉽지 않습니다. PsycINFO는 대부분 대학 도서관을 통한 기관 구독으로 접근하며, 개인이 직접 구독하기에는 비용 부담이 큽니다. 소속 대학이 구독 중인지 도서관 데이터베이스 목록에서 먼저 확인하는 것이 좋습니다."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "접근이 어렵다면 대안은 없나요?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "PubMed에서 정신건강·심리학 관련 키워드로 검색하거나, Google Scholar와 Semantic Scholar로 관련 논문을 찾는 방법이 있습니다. 다만 심리학 특유의 세밀한 주제 분류까지는 대체하기 어렵습니다."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
 </head>
 <body>
 
@@ -95,9 +186,15 @@
   </nav>
 
   <div class="page">
+    <nav class="crumbs" aria-label="breadcrumb"><a href="/">홈</a> › PsycINFO 가이드</nav>
     <div class="drawer-tab mono"><span class="dot"></span>Q&A · SP-01</div>
     <div class="tags"><span class="tag region">해외</span><span class="tag paid">구독형</span><span class="tag region">심리학</span></div>
     <h1>PsycINFO, 심리학 전공이라면 알아둘 것</h1>
+    <div class="answer-box">
+      <div class="answer-q">Q. PsycINFO는 어떻게 접속하나요?</div>
+      <p class="answer-a">개인 구독보다는 대학 도서관의 DB 목록을 통해 접속하는 경우가 대부분이며, 보통 EBSCOhost·ProQuest·Ovid 같은 플랫폼으로 제공됩니다. 학교가 구독하지 않는다면 PubMed와 Google Scholar로 대체할 수 있습니다.</p>
+      <div class="answer-meta">최종 수정 <time datetime="2026-10-24">2026-10-24</time> · 논문 사이트 카탈로그 운영 · 정보가 다르면 <a href="mailto:yjw2172@naver.com">yjw2172@naver.com</a>로 알려주세요.</div>
+    </div>
     <p class="lede">심리학 분야 주제어 분류가 가장 정교한 전문 DB로, 기관 구독이 있을 때 진가를 발휘합니다.</p>
     <div class="qa">
 

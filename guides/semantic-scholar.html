@@ -72,8 +72,62 @@
   .extra td{padding:10px; border-bottom:1px solid var(--line); color:var(--ink-soft); vertical-align:top;}
   .extra td a, .extra li a{color:var(--stamp); text-decoration:none; border-bottom:1px solid currentColor;}
   @media (max-width:560px){ .extra table{font-size:12.5px;} }
+
+  .crumbs{font-family:'IBM Plex Mono', monospace; font-size:11.5px; color:var(--ink-soft); margin-bottom:16px;}
+  .crumbs a{color:var(--ink-soft); text-decoration:none; border-bottom:1px solid var(--line);}
+  .crumbs a:hover{color:var(--stamp); border-color:var(--stamp);}
+  .answer-box{background:var(--card); border:1px solid var(--line); border-left:3px solid var(--teal); padding:16px 18px; margin:22px 0 18px;}
+  .answer-q{font-family:'Noto Serif KR', serif; font-weight:700; font-size:15.5px; color:var(--ink); margin-bottom:8px;}
+  .answer-a{font-size:14.5px; color:var(--ink); line-height:1.8; margin:0;}
+  .answer-meta{margin-top:12px; padding-top:10px; border-top:1px dashed var(--line); font-family:'IBM Plex Mono', monospace; font-size:11px; color:var(--ink-soft); line-height:1.7;}
+  .answer-meta a{color:inherit;}
+  .answer-wrap{max-width:1040px; margin:0 auto 28px; padding:0 28px;}
+  @media (max-width:560px){ .answer-wrap{padding:0 18px;} }
 </style>
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2557338953436433" crossorigin="anonymous"></script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "headline": "Semantic Scholar 활용 가이드",
+      "description": "AI 기반 인용 분석과 요약 기능을 제공하는 Semantic Scholar 활용법을 정리했습니다.",
+      "inLanguage": "ko",
+      "datePublished": "2026-07-23",
+      "dateModified": "2026-10-24",
+      "mainEntityOfPage": "https://paper-site-catalog.vercel.app/guides/semantic-scholar.html",
+      "author": {
+        "@type": "Organization",
+        "name": "논문 사이트 카탈로그",
+        "url": "https://paper-site-catalog.vercel.app/"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "논문 사이트 카탈로그",
+        "url": "https://paper-site-catalog.vercel.app/"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "홈",
+          "item": "https://paper-site-catalog.vercel.app/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Semantic Scholar 가이드",
+          "item": "https://paper-site-catalog.vercel.app/guides/semantic-scholar.html"
+        }
+      ]
+    }
+  ]
+}
+</script>
 </head>
 <body>
 
@@ -89,9 +143,15 @@
   </nav>
 
   <div class="page">
+    <nav class="crumbs" aria-label="breadcrumb"><a href="/">홈</a> › Semantic Scholar 가이드</nav>
     <div class="drawer-tab mono"><span class="dot"></span>GUIDE · GL·FREE-04</div>
     <div class="tags"><span class="tag region">해외</span><span class="tag free">무료</span><span class="tag region">전분야</span></div>
     <h1>Semantic Scholar 활용 가이드</h1>
+    <div class="answer-box">
+      <div class="answer-q">Q. Semantic Scholar는 Google Scholar와 무엇이 다른가요?</div>
+      <p class="answer-a">인용 수뿐 아니라 영향력 있는 인용(Highly Influential Citations)과 AI 요약(TL;DR)을 보여줘서 읽을 논문의 우선순위를 정하기 쉽습니다. 다만 영어 자료 위주이고, 분야에 따라 커버리지가 얇을 수 있습니다.</p>
+      <div class="answer-meta">최종 수정 <time datetime="2026-10-24">2026-10-24</time> · 논문 사이트 카탈로그 운영 · 정보가 다르면 <a href="mailto:yjw2172@naver.com">yjw2172@naver.com</a>로 알려주세요.</div>
+    </div>
 
     <p>Semantic Scholar는 앨런 인공지능 연구소(Allen Institute for AI)가 운영하는 AI 기반 학술 검색 엔진입니다. 단순 키워드 매칭을 넘어, 논문 간 인용 관계를 분석하고 핵심 내용을 자동으로 요약해주는 것이 가장 큰 특징입니다.</p>
 
